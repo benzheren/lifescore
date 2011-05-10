@@ -7,7 +7,7 @@
   * Employer
   * Position
 * Number of friends
-* Relationship
+* Relationship: should be a multiply not a plus
 * Languages
 * Family members
   * son
