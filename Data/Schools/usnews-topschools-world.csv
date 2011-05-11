@@ -1,401 +1,1 @@
-#,School,Location
-1,University of Cambridge,United Kingdom
-2,Harvard University,United States
-3,Yale University,United States
-4,University College London,United Kingdom
-5,Massachusetts Institute of Technology (MIT),United States
-6,University of Oxford,United Kingdom
-7,Imperial College London,United Kingdom
-8,University of Chicago,United States
-9,California Institute of Technology (Caltech),United States
-10,Princeton University,United States
-11,Columbia University,United States
-12,University of Pennsylvania (Upenn),United States
-13,Stanford University,United States
-14,Duke University,United States
-15,University of Michigan,United States
-16,Cornell University,United States
-17,Johns Hopkins University,United States
-19,Swiss Federal Institute of Technology (ETH Zurich),Switzerland
-18,McGill University,Canada
-20,Australian National University (ANU),Australia
-21,King's College London (KCL),United Kingdom
-22,University of Edinburgh,United Kingdom
-23,University of Hong Kong (HKU),Hong Kong
-24,The University of Tokyo,Japan
-25,Kyoto University,Japan
-26,Northwestern University,United States
-27,University of Bristol,United Kingdom
-28,"University of California, Berkeley (UC Berkeley)",United States
-29,University of Toronto,Canada
-30,University of Manchester,United Kingdom
-31,National University of Singapore (NUS),Singapore
-32,…cole Polytechnique FÈdÈrale de Lausanne  (EPFL),Switzerland
-33,…cole Normale SupÈrieure de Paris  (ENS Paris),France
-34,Carnegie Mellon University (CMU),United States
-35,"University of California, Los Angeles (UCLA)",United States
-36,"…cole Polytechnique, ParisTech",France
-37,University of Sydney,Australia
-38,University of Melbourne,Australia
-39,Brown University,United States
-40,Hong Kong University of Science and Technology (HKUST),Hong Kong
-41,New York University (NYU),United States
-42,Chinese University of Hong Kong (CUHK),Hong Kong
-43,University of Queensland (UQ),Australia
-44,University of British Columbia (UBC),Canada
-45,University of Copenhagen,Denmark
-46,University of New South Wales (UNSW),Australia
-47,Peking University,China
-48,University of Wisconsin-Madison,United States
-49,Osaka University,Japan
-50,Seoul National University (SNU),South Korea
-51,Ruprecht-Karls-Universit‰t Heidelberg,Germany
-52,Trinity College Dublin,Ireland
-53,University of Warwick,United Kingdom
-54,Tsinghua University,China
-55,University of Washington,United States
-56,University of Amsterdam,Netherlands
-57,"University of North Carolina, Chapel Hill",United States
-58,Technische Universit‰t M¸nchen (TUM),Germany
-59,University of Birmingham,United Kingdom
-60,Tokyo Institute of Technology,Japan
-61,Monash University,Australia
-62,Uppsala University,Sweden
-63,University of Illinois at Urbana-Champaign (UIUC),United States
-64,Boston University,United States
-65,"University of California, San Diego (UCSD)",United States
-66,Ludwig-Maximilians-Universit‰t M¸nchen (LMU),Germany
-67,University of Texas at Austin (UT Austin),United States
-68,University of Auckland,New Zealand
-69,University of Sheffield,United Kingdom
-70,Freie Universit‰t Berlin,Germany
-71,University of Geneva,Switzerland
-72,Lund University,Sweden
-73,University of Nottingham,United Kingdom
-74,Nanyang Technological University (NTU),Singapore
-76,University of Helsinki,Finland
-75,Washington University in St. Louis,United States
-77,University of Glasgow,United Kingdom
-78,University of Alberta,Canada
-79,KAIST - Korea Advanced Institute of Science & Technology,South Korea
-81,London School of Economics and Political Science (LSE),United Kingdom
-80,University of Southampton,United Kingdom
-83,Leiden University,Netherlands
-82,Utrecht University,Netherlands
-84,Aarhus University,Denmark
-85,University of Leeds,United Kingdom
-86,Katholieke Universiteit Leuven,Belgium
-87,Purdue University,United States
-88,University of York,United Kingdom
-89,University of Western Australia (UWA),Australia
-90,Dartmouth College,United States
-91,Nagoya University,Japan
-92,Durham University,United Kingdom
-93,Lomonosov Moscow State University,Russia
-94,National Taiwan University (NTU),Taiwan
-95,University of St Andrews,United Kingdom
-96,University of Minnesota,United States
-97,Universit‰t Freiburg,Germany
-98,Pennsylvania State University (Penn State),United States
-99,Erasmus University Rotterdam,Netherlands
-100,University of Oslo,Norway
-101,University of Zurich,Switzerland
-102,Tohoku University,Japan
-103,University of Adelaide,Australia
-104,"University of Maryland, College Park",United States
-105,Fudan University,China
-106,Georgia Institute of Technology,United States
-107,Emory University,United States
-108,Delft University of Technology (TU Delft),Netherlands
-109,Hebrew University of Jerusalem,Israel
-110,"University of California, Davis (UCD)",United States
-111,Maastricht University,Netherlands
-112,Pohang University of Science and Technology (POSTECH),South Korea
-113,University of Southern California (USC),United States
-114,University College Dublin (UCD),Ireland
-115,Rice University,United States
-116,"University of California, Santa Barbara (UCSB)",United States
-117,University of Aberdeen,United Kingdom
-118,UniversitÈ Pierre et Marie Curie (UPMC),France
-119,University of Pittsburgh,United States
-119,University of Groningen,Netherlands
-121,University of Liverpool,United Kingdom
-122,Cardiff University,United Kingdom
-123,Humboldt-Universit‰t zu Berlin,Germany
-125,UniversitÈ Catholique de Louvain (UCL),Belgium
-124,Ohio State University,United States
-126,Eindhoven University of Technology (TU Eindhoven),Netherlands
-129,Case Western Reserve University,United States
-127,University of Rochester,United States
-128,City University of Hong Kong,Hong Kong
-130,University of Virginia,United States
-131,Eberhard Karls Universit‰t T¸bingen,Germany
-131,Queen's University,Canada
-133,University of Bergen,Norway
-134,Vanderbilt University,United States
-135,University of Otago,New Zealand
-136,UniversitÈ de MontrÈal,Canada
-137,University of Basel,Switzerland
-138,Tel Aviv University,Israel
-139,…cole Normale SupÈrieure de Lyon (ENS Lyon),France
-140,Newcastle University,United Kingdom
-141,Technical University of Denmark,Denmark
-142,Yonsei University,South Korea
-144,University of Vienna,Austria
-143,University of Bath,United Kingdom
-145,University of Waterloo,Canada
-146,"University of California, Irvine",United States
-147,"Queen Mary, University of London (QMUL)",United Kingdom
-148,Universit‰t de Barcelona,Spain
-149,Radboud University Nijmegen,Netherlands
-150,"KTH, Royal Institute of Technology",Sweden
-151,Shanghai Jiao Tong University (SJTU),China
-152,University of Lausanne,Switzerland
-153,Kyushu University,Japan
-154,University of Science and Technology of China,China
-155,Georgetown University,United States
-155,University of Sussex,United Kingdom
-157,Tufts University,United States
-158,RWTH Aachen,Germany
-160,Technion - Israel Institute of Technology,Israel
-159,University of Arizona,United States
-161,University of Cape Town,South Africa
-162,University of Bern,Switzerland
-163,McMaster University,Canada
-164,University of Western Ontario,Canada
-165,University of Calgary,Canada
-166,Hong Kong Polytechnic University,Hong Kong
-167,Universit‰t Karlsruhe,Germany
-168,Stockholm University,Sweden
-169,University of Colorado at Boulder,United States
-170,University of Leicester,United Kingdom
-171,Vrije Universiteit Amsterdam (VU Amsterdam),Netherlands
-171,University of Tsukuba,Japan
-173,Universit‰t AutÛnoma de Barcelona,Spain
-174,Georg-August-Universit‰t Gottingen,Germany
-175,Hokkaido University,Japan
-176,UniversitÈ di Bologna,Italy
-177,Nanjing University,China
-178,Wageningen University,Netherlands
-179,University of Antwerp,Belgium
-181,Chulalongkorn University,Thailand
-180,Lancaster University,United Kingdom
-182,Waseda University,Japan
-182,University of Gothenburg,Sweden
-184,University College Cork (UCC),Ireland
-185,University of Reading,United Kingdom
-186,"UniversitÈ Paris Sorbonne, Paris 4",France
-187,Indian Institute of Technology Bombay (IITB),India
-188,University of Iowa,United States
-189,University of Canterbury,New Zealand
-191,Sapienza UniversitÈ di Roma,Italy
-190,Korea University,South Korea
-192,University of Ghent,Belgium
-193,University of Florida,United States
-194,Stony Brook University,United States
-195,Universit‰t Frankfurt am Main,Germany
-196,National Tsing Hua University,Taiwan
-197,Queen's University of Belfast,United Kingdom
-198,Texas A&M University,United States
-199,University of Twente,Netherlands
-200,University of Dundee,United Kingdom
-201,Rheinische Friedrich-Wilhelms-Universit‰t Bonn,Germany
-202,Indian Institute of Technology Delhi (IITD),India
-203,"Sciences Po, Paris",France
-204,Chalmers University of Technology,Sweden
-206,Universit‰t Stuttgart,Germany
-205,Keio University,Japan
-208,Universiti Malaya (UM),Malaysia
-207,Michigan State University (MSU),United States
-209,UniversitÈ Libre de Bruxelles (ULB),Belgium
-210,St. Petersburg University,Russia
-211,University of Turku,Finland
-212,Dalhousie University,Canada
-213,Universidad AutÛnoma de Madrid,Spain
-215,Simon Fraser University,Canada
-214,Julius-Maximilians-Universit‰t Wurzburg,Germany
-216,"Rutgers, The State University of New Jersey, New Brunswick",United States
-217,Technische Universit‰t Berlin,Germany
-218,Zhejiang University,China
-219,University of Notre Dame,United States
-220,Macquarie University,Australia
-222,King Saud University (KSU),Saudi Arabia
-221,Universidad Nacional AutÛnoma de MÈxico (UNAM),Mexico
-223,Rensselaer Polytechnic Institute,United States
-224,RMIT University,Australia
-225,Victoria University of Wellington,New Zealand
-226,"UniversitÈ Paris 11, Sud",France
-227,Indiana University Bloomington,United States
-228,Mahidol University,Thailand
-229,"UniversitÈ Paris 1, Pantheon-Sorbonne",France
-230,"University of Massachusetts, Amherst",United States
-231,University of Ottawa,Canada
-232,"National University of Ireland, Galway",Ireland
-233,Wake Forest University,United States
-234,Kobe University,Japan
-235,University of Miami,United States
-236,University of Indonesia,Indonesia
-237,Norwegian University of Science and Technology,Norway
-238,Vrije Universiteit Brussel (VUB),Belgium
-240,Tulane University,United States
-239,Vienna University of Technology,Austria
-241,University of Victoria,Canada
-242,Universit‰t Hamburg,Germany
-243,University of Surrey,United Kingdom
-244,Universit‰t Mannheim,Germany
-245,Universit‰t Koln,Germany
-246,UniversitÈ de Strasbourg,France
-247,Universit‰t Ulm,Germany
-248,University of Liege,Belgium
-249,Indian Institute of Technology Kanpur (IITK),India
-250,Aalto University,Finland
-251,Flinders University,Australia
-252,"University of Illinois, Chicago (UIC)",United States
-254,Universidad de S„o Paulo,Brazil
-253,Hiroshima University,Japan
-255,King Fahd University of Petroleum & Minerals (KFUPM),Saudi Arabia
-256,University of Newcastle,Australia
-257,"University of Technology, Sydney",Australia
-258,SOAS - School of Oriental and African Studies,United Kingdom
-259,University of Exeter,United Kingdom
-260,Universit‰t Erlangen-N¸rnberg,Germany
-261,UniversitÈ degli Studi di Padova (UNIPD),Italy
-262,Indian Institute of Technology Madras (IITM),India
-263,Universiti Kebangsaan Malaysia (UKM),Malaysia
-264,George Washington University,United States
-265,University of Strathclyde,United Kingdom
-266,Technische Universit‰t Darmstadt,Germany
-267,Charles University,Czech Republic
-267,University of Wollongong,Australia
-269,Universidad Complutense de Madrid,Spain
-270,Loughborough University,United Kingdom
-271,Laval University,Canada
-272,North Carolina State University,United States
-273,"UniversitÈ Grenoble, Joseph Fourier",France
-274,Curtin University of Technology,Australia
-276,University of Cincinnati,United States
-275,Iowa State University,United States
-277,University of Hawaii at M_noa,United States
-278,Universit‰t Innsbruck,Austria
-279,"…cole des Ponts, ParisTech",France
-281,Brandeis University,United States
-279,University of South Australia,Australia
-282,"UniversitÈ Paris 7, Diderot",France
-283,National Cheng Kung University,Taiwan
-284,"University of California, Santa Cruz",United States
-285,"University of California, Riverside",United States
-286,University of Athens,Greece
-288,La Trobe University,Australia
-286,"UniversitÈ Montpellier 2, Sciences et Techniques",France
-289,Queensland University of Technology,Australia
-290,National Yang Ming University,Taiwan
-291,Royal Holloway University of London,United Kingdom
-292,Universidade Estadual de Campinas,Brazil
-293,University of Troms¯,Norway
-294,Universit‰t Leipzig,Germany
-295,Politecnico di Milano,Italy
-296,Aston University,United Kingdom
-297,Umea University,Sweden
-298,University of Southern Denmark,Denmark
-299,University of East Anglia (UEA),United Kingdom
-300,UniversitÈ di Pisa,Italy
-300,Tokyo Medical and Dental University,Japan
-302,Massey University,New Zealand
-303,University of Jyvaskyla,Finland
-304,Jagiellonian University,Poland
-305,University of Essex,United Kingdom
-306,University of Utah,United States
-307,Ateneo de Manila University,Philippines
-308,University of Eastern Finland,Finland
-309,Universiti Sains Malaysia (USM),Malaysia
-310,Ruhr-Universit‰t Bochum,Germany
-310,Indian Institute of Technology Kharagpur (IITKGP),India
-312,Universit‰t Konstanz,Germany
-314,University of Oulu,Finland
-313,University of the Philippines,Philippines
-315,Universit‰t des Saarlandes,Germany
-316,Universit‰t Bielefeld,Germany
-317,University of Waikato,New Zealand
-318,Chiba University,Japan
-320,Universiti Putra Malaysia (UPM),Malaysia
-319,University of Tasmania,Australia
-321,Universitas Gadjah Mada,Indonesia
-322,Technische Universit‰t Dresden,Germany
-323,Griffith University,Australia
-324,Universit‰t Dusseldorf,Germany
-325,Westfalische Wilhelms-Universit‰t Munster,Germany
-326,Universidad de Buenos Aires,Argentina
-327,National Chiao Tung University,Taiwan
-328,UniversitÈ degli Studi di Firenze (UNIFI),Italy
-329,"UniversitÈ Paris 5, Descartes",France
-330,Dublin City University,Ireland
-332,Pontificia Universidad Catolica de Chile,Chile
-331,Bilkent University,Turkey
-333,York University,Canada
-334,Colorado State University,United States
-336,Arizona State University,United States
-335,Universit‰t Pompeu Fabra,Spain
-337,Ben Gurion University of The Negev,Israel
-338,University of Connecticut,United States
-339,Universit‰t Bremen,Germany
-340,Virginia Polytechnic Institute (virginia Tech),United States
-341,American University of Beirut (AUB),Lebanon
-342,Hong Kong Baptist University,Hong Kong
-343,Sungkyunkwan University,South Korea
-344,Johannes Gutenberg Universit‰t Mainz,Germany
-345,Kyung Hee University,South Korea
-346,UniversitÈ Lille 1,France
-347,University of Georgia,United States
-348,Ewha Womans University,South Korea
-349,Karl-franzens-universitaet Graz,Austria
-350,University of Kentucky,United States
-351,University of Alabama,United States
-352,Washington State University,United States
-353,Universidad de Navarra,Spain
-355,Hanyang University,South Korea
-354,James Cook University,Australia
-356,Heriot-watt University,United Kingdom
-358,University of Manitoba,Canada
-357,Universidad Austral,Argentina
-359,Boston College,United States
-360,University of The Witwatersrand,South Africa
-362,Brunel University,United Kingdom
-361,Deakin University,Australia
-363,UniversitÈ degli Studi di Pavia (UNIPV),Italy
-364,Warsaw University,Poland
-365,Universiti Teknologi Malaysia (UTM),Malaysia
-366,National University of Sciences and Technology (NUST) Islamabad,Pakistan
-367,Universidad de Chile,Chile
-368,Bangor University,United Kingdom
-370,University of Tampere,Finland
-369,National Taiwan University of Science and Technology,Taiwan
-371,University of Delhi,India
-371,United Arab Emirates University,United Arab Emirates
-373,Universit‰t Bayreuth,Germany
-374,Illinois Institute of Technology,United States
-375,Novosibirsk State University,Russia
-377,Swansea University,United Kingdom
-376,University of Kansas,United States
-378,Philipps-Universit‰t Marburg,Germany
-379,Universit‰t Regensburg,Germany
-380,Aberystwyth University,United Kingdom
-381,Universidade Federal do Rio de Janeiro,Brazil
-382,"UniversitÈ Toulouse III, Paul Sabatier",France
-383,University of St Gallen (hsg),Switzerland
-384,Universidade Nova de Lisboa,Portugal
-385,University of Tennessee,United States
-386,"Goldsmiths, University of London",United Kingdom
-387,TecnolÛgico de Monterrey (ITESM),Mexico
-388,Tongji University,China
-389,Linkoping University,Sweden
-390,"UniversitÈ Lyon 1, Claude Bernard",France
-391,Howard University,United States
-391,Pusan National University,South Korea
-393,University at Buffalo SUNY,United States
-394,University of Bradford,United Kingdom
-395,Dublin Institute of Technology,Ireland
-396,University of Coimbra,Portugal
-397,Sogang University,South Korea
-398,National Central University,Taiwan
-399,Universit‰t Jena,Germany
-400,Christian-Albrechts-Universit‰t zu Kiel,Germany
+Ôªø#,School,Location1,University of Cambridge,United Kingdom2,Harvard University,United States3,Yale University,United States4,University College London,United Kingdom5,Massachusetts Institute of Technology (MIT),United States6,University of Oxford,United Kingdom7,Imperial College London,United Kingdom8,University of Chicago,United States9,California Institute of Technology (Caltech),United States10,Princeton University,United States11,Columbia University,United States12,University of Pennsylvania (Upenn),United States13,Stanford University,United States14,Duke University,United States15,University of Michigan,United States16,Cornell University,United States17,Johns Hopkins University,United States19,Swiss Federal Institute of Technology (ETH Zurich),Switzerland18,McGill University,Canada20,Australian National University (ANU),Australia21,King's College London (KCL),United Kingdom22,University of Edinburgh,United Kingdom23,University of Hong Kong (HKU),Hong Kong24,The University of Tokyo,Japan25,Kyoto University,Japan26,Northwestern University,United States27,University of Bristol,United Kingdom28,"University of California, Berkeley (UC Berkeley)",United States29,University of Toronto,Canada30,University of Manchester,United Kingdom31,National University of Singapore (NUS),Singapore32,∆ícole Polytechnique F≈Ωd≈Ωrale de Lausanne  (EPFL),Switzerland33,∆ícole Normale Sup≈Ωrieure de Paris  (ENS Paris),France34,Carnegie Mellon University (CMU),United States35,"University of California, Los Angeles (UCLA)",United States36,"∆ícole Polytechnique, ParisTech",France37,University of Sydney,Australia38,University of Melbourne,Australia39,Brown University,United States40,Hong Kong University of Science and Technology (HKUST),Hong Kong41,New York University (NYU),United States42,Chinese University of Hong Kong (CUHK),Hong Kong43,University of Queensland (UQ),Australia44,University of British Columbia (UBC),Canada45,University of Copenhagen,Denmark46,University of New South Wales (UNSW),Australia47,Peking University,China48,University of Wisconsin-Madison,United States49,Osaka University,Japan50,Seoul National University (SNU),South Korea51,Ruprecht-Karls-Universit≈†t Heidelberg,Germany52,Trinity College Dublin,Ireland53,University of Warwick,United Kingdom54,Tsinghua University,China55,University of Washington,United States56,University of Amsterdam,Netherlands57,"University of North Carolina, Chapel Hill",United States58,Technische Universit≈†t M≈∏nchen (TUM),Germany59,University of Birmingham,United Kingdom60,Tokyo Institute of Technology,Japan61,Monash University,Australia62,Uppsala University,Sweden63,University of Illinois at Urbana-Champaign (UIUC),United States64,Boston University,United States65,"University of California, San Diego (UCSD)",United States66,Ludwig-Maximilians-Universit≈†t M≈∏nchen (LMU),Germany67,University of Texas at Austin (UT Austin),United States68,University of Auckland,New Zealand69,University of Sheffield,United Kingdom70,Freie Universit≈†t Berlin,Germany71,University of Geneva,Switzerland72,Lund University,Sweden73,University of Nottingham,United Kingdom74,Nanyang Technological University (NTU),Singapore76,University of Helsinki,Finland75,Washington University in St. Louis,United States77,University of Glasgow,United Kingdom78,University of Alberta,Canada79,KAIST - Korea Advanced Institute of Science & Technology,South Korea81,London School of Economics and Political Science (LSE),United Kingdom80,University of Southampton,United Kingdom83,Leiden University,Netherlands82,Utrecht University,Netherlands84,Aarhus University,Denmark85,University of Leeds,United Kingdom86,Katholieke Universiteit Leuven,Belgium87,Purdue University,United States88,University of York,United Kingdom89,University of Western Australia (UWA),Australia90,Dartmouth College,United States91,Nagoya University,Japan92,Durham University,United Kingdom93,Lomonosov Moscow State University,Russia94,National Taiwan University (NTU),Taiwan95,University of St Andrews,United Kingdom96,University of Minnesota,United States97,Universit≈†t Freiburg,Germany98,Pennsylvania State University (Penn State),United States99,Erasmus University Rotterdam,Netherlands100,University of Oslo,Norway101,University of Zurich,Switzerland102,Tohoku University,Japan103,University of Adelaide,Australia104,"University of Maryland, College Park",United States105,Fudan University,China106,Georgia Institute of Technology,United States107,Emory University,United States108,Delft University of Technology (TU Delft),Netherlands109,Hebrew University of Jerusalem,Israel110,"University of California, Davis (UCD)",United States111,Maastricht University,Netherlands112,Pohang University of Science and Technology (POSTECH),South Korea113,University of Southern California (USC),United States114,University College Dublin (UCD),Ireland115,Rice University,United States116,"University of California, Santa Barbara (UCSB)",United States117,University of Aberdeen,United Kingdom118,Universit≈Ω Pierre et Marie Curie (UPMC),France119,University of Pittsburgh,United States119,University of Groningen,Netherlands121,University of Liverpool,United Kingdom122,Cardiff University,United Kingdom123,Humboldt-Universit≈†t zu Berlin,Germany125,Universit≈Ω Catholique de Louvain (UCL),Belgium124,Ohio State University,United States126,Eindhoven University of Technology (TU Eindhoven),Netherlands129,Case Western Reserve University,United States127,University of Rochester,United States128,City University of Hong Kong,Hong Kong130,University of Virginia,United States131,Eberhard Karls Universit≈†t T≈∏bingen,Germany131,Queen's University,Canada133,University of Bergen,Norway134,Vanderbilt University,United States135,University of Otago,New Zealand136,Universit≈Ω de Montr≈Ωal,Canada137,University of Basel,Switzerland138,Tel Aviv University,Israel139,∆ícole Normale Sup≈Ωrieure de Lyon (ENS Lyon),France140,Newcastle University,United Kingdom141,Technical University of Denmark,Denmark142,Yonsei University,South Korea144,University of Vienna,Austria143,University of Bath,United Kingdom145,University of Waterloo,Canada146,"University of California, Irvine",United States147,"Queen Mary, University of London (QMUL)",United Kingdom148,Universit≈†t de Barcelona,Spain149,Radboud University Nijmegen,Netherlands150,"KTH, Royal Institute of Technology",Sweden151,Shanghai Jiao Tong University (SJTU),China152,University of Lausanne,Switzerland153,Kyushu University,Japan154,University of Science and Technology of China,China155,Georgetown University,United States155,University of Sussex,United Kingdom157,Tufts University,United States158,RWTH Aachen,Germany160,Technion - Israel Institute of Technology,Israel159,University of Arizona,United States161,University of Cape Town,South Africa162,University of Bern,Switzerland163,McMaster University,Canada164,University of Western Ontario,Canada165,University of Calgary,Canada166,Hong Kong Polytechnic University,Hong Kong167,Universit≈†t Karlsruhe,Germany168,Stockholm University,Sweden169,University of Colorado at Boulder,United States170,University of Leicester,United Kingdom171,Vrije Universiteit Amsterdam (VU Amsterdam),Netherlands171,University of Tsukuba,Japan173,Universit≈†t Aut‚Äînoma de Barcelona,Spain174,Georg-August-Universit≈†t Gottingen,Germany175,Hokkaido University,Japan176,Universit≈Ω di Bologna,Italy177,Nanjing University,China178,Wageningen University,Netherlands179,University of Antwerp,Belgium181,Chulalongkorn University,Thailand180,Lancaster University,United Kingdom182,Waseda University,Japan182,University of Gothenburg,Sweden184,University College Cork (UCC),Ireland185,University of Reading,United Kingdom186,"Universit≈Ω Paris Sorbonne, Paris 4",France187,Indian Institute of Technology Bombay (IITB),India188,University of Iowa,United States189,University of Canterbury,New Zealand191,Sapienza Universit≈Ω di Roma,Italy190,Korea University,South Korea192,University of Ghent,Belgium193,University of Florida,United States194,Stony Brook University,United States195,Universit≈†t Frankfurt am Main,Germany196,National Tsing Hua University,Taiwan197,Queen's University of Belfast,United Kingdom198,Texas A&M University,United States199,University of Twente,Netherlands200,University of Dundee,United Kingdom201,Rheinische Friedrich-Wilhelms-Universit≈†t Bonn,Germany202,Indian Institute of Technology Delhi (IITD),India203,"Sciences Po, Paris",France204,Chalmers University of Technology,Sweden206,Universit≈†t Stuttgart,Germany205,Keio University,Japan208,Universiti Malaya (UM),Malaysia207,Michigan State University (MSU),United States209,Universit≈Ω Libre de Bruxelles (ULB),Belgium210,St. Petersburg University,Russia211,University of Turku,Finland212,Dalhousie University,Canada213,Universidad Aut‚Äînoma de Madrid,Spain215,Simon Fraser University,Canada214,Julius-Maximilians-Universit≈†t Wurzburg,Germany216,"Rutgers, The State University of New Jersey, New Brunswick",United States217,Technische Universit≈†t Berlin,Germany218,Zhejiang University,China219,University of Notre Dame,United States220,Macquarie University,Australia222,King Saud University (KSU),Saudi Arabia221,Universidad Nacional Aut‚Äînoma de M≈Ωxico (UNAM),Mexico223,Rensselaer Polytechnic Institute,United States224,RMIT University,Australia225,Victoria University of Wellington,New Zealand226,"Universit≈Ω Paris 11, Sud",France227,Indiana University Bloomington,United States228,Mahidol University,Thailand229,"Universit≈Ω Paris 1, Pantheon-Sorbonne",France230,"University of Massachusetts, Amherst",United States231,University of Ottawa,Canada232,"National University of Ireland, Galway",Ireland233,Wake Forest University,United States234,Kobe University,Japan235,University of Miami,United States236,University of Indonesia,Indonesia237,Norwegian University of Science and Technology,Norway238,Vrije Universiteit Brussel (VUB),Belgium240,Tulane University,United States239,Vienna University of Technology,Austria241,University of Victoria,Canada242,Universit≈†t Hamburg,Germany243,University of Surrey,United Kingdom244,Universit≈†t Mannheim,Germany245,Universit≈†t Koln,Germany246,Universit≈Ω de Strasbourg,France247,Universit≈†t Ulm,Germany248,University of Liege,Belgium249,Indian Institute of Technology Kanpur (IITK),India250,Aalto University,Finland251,Flinders University,Australia252,"University of Illinois, Chicago (UIC)",United States254,Universidad de S‚Äπo Paulo,Brazil253,Hiroshima University,Japan255,King Fahd University of Petroleum & Minerals (KFUPM),Saudi Arabia256,University of Newcastle,Australia257,"University of Technology, Sydney",Australia258,SOAS - School of Oriental and African Studies,United Kingdom259,University of Exeter,United Kingdom260,Universit≈†t Erlangen-N≈∏rnberg,Germany261,Universit≈Ω degli Studi di Padova (UNIPD),Italy262,Indian Institute of Technology Madras (IITM),India263,Universiti Kebangsaan Malaysia (UKM),Malaysia264,George Washington University,United States265,University of Strathclyde,United Kingdom266,Technische Universit≈†t Darmstadt,Germany267,Charles University,Czech Republic267,University of Wollongong,Australia269,Universidad Complutense de Madrid,Spain270,Loughborough University,United Kingdom271,Laval University,Canada272,North Carolina State University,United States273,"Universit≈Ω Grenoble, Joseph Fourier",France274,Curtin University of Technology,Australia276,University of Cincinnati,United States275,Iowa State University,United States277,University of Hawaii at M_noa,United States278,Universit≈†t Innsbruck,Austria279,"∆ícole des Ponts, ParisTech",France281,Brandeis University,United States279,University of South Australia,Australia282,"Universit≈Ω Paris 7, Diderot",France283,National Cheng Kung University,Taiwan284,"University of California, Santa Cruz",United States285,"University of California, Riverside",United States286,University of Athens,Greece288,La Trobe University,Australia286,"Universit≈Ω Montpellier 2, Sciences et Techniques",France289,Queensland University of Technology,Australia290,National Yang Ming University,Taiwan291,Royal Holloway University of London,United Kingdom292,Universidade Estadual de Campinas,Brazil293,University of Troms¬ø,Norway294,Universit≈†t Leipzig,Germany295,Politecnico di Milano,Italy296,Aston University,United Kingdom297,Umea University,Sweden298,University of Southern Denmark,Denmark299,University of East Anglia (UEA),United Kingdom300,Universit≈Ω di Pisa,Italy300,Tokyo Medical and Dental University,Japan302,Massey University,New Zealand303,University of Jyvaskyla,Finland304,Jagiellonian University,Poland305,University of Essex,United Kingdom306,University of Utah,United States307,Ateneo de Manila University,Philippines308,University of Eastern Finland,Finland309,Universiti Sains Malaysia (USM),Malaysia310,Ruhr-Universit≈†t Bochum,Germany310,Indian Institute of Technology Kharagpur (IITKGP),India312,Universit≈†t Konstanz,Germany314,University of Oulu,Finland313,University of the Philippines,Philippines315,Universit≈†t des Saarlandes,Germany316,Universit≈†t Bielefeld,Germany317,University of Waikato,New Zealand318,Chiba University,Japan320,Universiti Putra Malaysia (UPM),Malaysia319,University of Tasmania,Australia321,Universitas Gadjah Mada,Indonesia322,Technische Universit≈†t Dresden,Germany323,Griffith University,Australia324,Universit≈†t Dusseldorf,Germany325,Westfalische Wilhelms-Universit≈†t Munster,Germany326,Universidad de Buenos Aires,Argentina327,National Chiao Tung University,Taiwan328,Universit≈Ω degli Studi di Firenze (UNIFI),Italy329,"Universit≈Ω Paris 5, Descartes",France330,Dublin City University,Ireland332,Pontificia Universidad Catolica de Chile,Chile331,Bilkent University,Turkey333,York University,Canada334,Colorado State University,United States336,Arizona State University,United States335,Universit≈†t Pompeu Fabra,Spain337,Ben Gurion University of The Negev,Israel338,University of Connecticut,United States339,Universit≈†t Bremen,Germany340,Virginia Polytechnic Institute (virginia Tech),United States341,American University of Beirut (AUB),Lebanon342,Hong Kong Baptist University,Hong Kong343,Sungkyunkwan University,South Korea344,Johannes Gutenberg Universit≈†t Mainz,Germany345,Kyung Hee University,South Korea346,Universit≈Ω Lille 1,France347,University of Georgia,United States348,Ewha Womans University,South Korea349,Karl-franzens-universitaet Graz,Austria350,University of Kentucky,United States351,University of Alabama,United States352,Washington State University,United States353,Universidad de Navarra,Spain355,Hanyang University,South Korea354,James Cook University,Australia356,Heriot-watt University,United Kingdom358,University of Manitoba,Canada357,Universidad Austral,Argentina359,Boston College,United States360,University of The Witwatersrand,South Africa362,Brunel University,United Kingdom361,Deakin University,Australia363,Universit≈Ω degli Studi di Pavia (UNIPV),Italy364,Warsaw University,Poland365,Universiti Teknologi Malaysia (UTM),Malaysia366,National University of Sciences and Technology (NUST) Islamabad,Pakistan367,Universidad de Chile,Chile368,Bangor University,United Kingdom370,University of Tampere,Finland369,National Taiwan University of Science and Technology,Taiwan371,University of Delhi,India371,United Arab Emirates University,United Arab Emirates373,Universit≈†t Bayreuth,Germany374,Illinois Institute of Technology,United States375,Novosibirsk State University,Russia377,Swansea University,United Kingdom376,University of Kansas,United States378,Philipps-Universit≈†t Marburg,Germany379,Universit≈†t Regensburg,Germany380,Aberystwyth University,United Kingdom381,Universidade Federal do Rio de Janeiro,Brazil382,"Universit≈Ω Toulouse III, Paul Sabatier",France383,University of St Gallen (hsg),Switzerland384,Universidade Nova de Lisboa,Portugal385,University of Tennessee,United States386,"Goldsmiths, University of London",United Kingdom387,Tecnol‚Äîgico de Monterrey (ITESM),Mexico388,Tongji University,China389,Linkoping University,Sweden390,"Universit≈Ω Lyon 1, Claude Bernard",France391,Howard University,United States391,Pusan National University,South Korea393,University at Buffalo SUNY,United States394,University of Bradford,United Kingdom395,Dublin Institute of Technology,Ireland396,University of Coimbra,Portugal397,Sogang University,South Korea398,National Central University,Taiwan399,Universit≈†t Jena,Germany400,Christian-Albrechts-Universit≈†t zu Kiel,Germany
