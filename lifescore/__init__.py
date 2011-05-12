@@ -9,9 +9,9 @@ def main(global_config, **settings):
     engine = engine_from_config(settings, 'sqlalchemy.')
     initialize_sql(engine)
     config = Configurator(settings=settings)
+    config.scan()
     config.add_static_view('static', 'lifescore:static')
-    config.add_route('home', '/', view='lifescore.views.my_view',
-                     view_renderer='templates/mytemplate.pt')
+    config.add_route('home', '/')
     return config.make_wsgi_app()
 
 
