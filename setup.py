@@ -15,6 +15,7 @@ requires = [
     'zope.sqlalchemy',
     'WebError',
     'facebook-python-sdk',
+    'python-memcached',
     ]
 
 if sys.version_info[:3] < (2,5,0):
