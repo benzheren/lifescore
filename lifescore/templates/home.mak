@@ -6,7 +6,10 @@
 <script>
 	window.fbAsyncInit = function() {
 		FB.init({appId: '${facebook_app_id}', status: true, cookie: true,
-                	xfbml: true});
+			xfbml: true});
+		FB.Event.subscribe('auth.login', function(response) {
+			window.location.reload();	
+		});
 	};
 
    	(function() {
