@@ -1,1 +1,151 @@
-Prestige,Job2,Education administrator2,Interpreter/Translator2,Mediator2,Practice Administrator3,Court reporter3,Technical Writer3,Dental hygienist3,Lab technician3,Marriage and family therapist3,Massage therapist3,Meeting planner3,Physical therapist assistant4,Information Technology Training Specialist4,Clergy4,Computer systems analyst4,Physician Assistant4,Occupational Therapist4,Information Technology Business Analyst4,Business Development Analyst4,Transportation Engineer4,Operations Research Analyst4,Construction Estimator4,Clinical Research Associate4,Information Technology Specialist4,Marketing Consultant4,Nurse Practitioner4,Social Worker4,Customer Service Manager4,Compensation Analyst4,Business Operations Manager4,Medical Case Manager4,Athletic trainer4,Curator4,Emergency management specialist4,Medical and public health social worker4,Training specialist4,Test Software Development Engineer4,Analyst5,Management Consultant5,Environmental Health & Safety Specialist5,Network Operations Project Manager5,Information Technology Consultant5,Information Technology Network Engineer5,Computer and Information Scientist5,Applications Engineer5,Human Resources Consultant5,Nursing Home Director5,Employment Recruiter5,General Sales Manager5,Technical Services Manager5,Sales Account Manager5,Rehabilitation Services Director5,Information Technology Systems Manager5,Outside Sales Manager5,Category Manager5,Practice Manager5,Environmental Project Manager5,Business Manager5,Information Technology Project Coordinator5,Web Project Manager5,Geographic Information Systems Analyst5,"Security Director (Facilities, Personnel, etc.)"5,Environmental engineering technician5,Environmental science technician5,Financial analyst5,"Heating, air conditioning and refrigeration technician"5,Hydrologist5,Multimedia artist5,Radiologic technologist5,Sales manager5,School psychologist5,Special-education teacher5,Public relations specialist5,Environmental Engineer5,Project Engineer5,Structural Engineer5,Systems Engineer5,Systems Administrator5,Web Developer6,Gaming manager6,Physical Therapist6,Product Manager6,Civil Engineer6,Database Administrator6,Certified Public Accountant (CPA)6,Biomedical Engineer6,Actuary6,Nurse Anesthetist6,Risk Management Manager6,Healthcare Consultant6,Information Systems Security Engineer6,Software Engineer / Web Engineer / Data Engineer / Computer Engineer / Programmer / Software Developer6,Information Technology Manager6,Telecommunications Network Engineer6,Construction Project Manager6,Information Technology Program Manager6,Research & Development Manager6,Regional Sales Manager6,Training Development Director6,Physical Therapy Director6,Healthcare Services Program Director6,Intensive Care Unit Nurse6,Tax Manager6,Statistician6,Accounting Director6,Auditing Manager6,Public Relations Director6,Clinical Services Director6,Director of Communications6,Construction Superintendent6,Senior Product Development Scientist6,Senior Data Analyst6,Obstetrician / Gynecologist6,Film and video editor6,Financial adviser6,Firefighter6,Logistician6,Meteorologist6,Registered nurse6,Pharmacist7,Sales Director7,Dentist7,Product Management Director7,Director of Nursing7,Psychiatrist7,Speech-Language Pathologist7,Optometrist7,Anesthesiologist7,Biotechnology Research Scientist7,Network architect7,Urban planner7,Veterinarian7,Investment Banker7,Director8,Architect8,Commercial pilot8,Software Architect8,Emergency Room Physician8,Senior Sales Executive8,Primary Care Physician8,Attorney / Lawyer8,General Surgeon8,Vice President / VP9,Senior Vice President / SVP9,CTO / Chief Technology Officer9,CIO / Chief Information Officer9,COO / Chief Operations Officer9,CFO / Chief Financial Officer10,President10,CEO / Chairman
+"Prestige","Job"
+2,"Education administrator"
+2,"Interpreter/Translator"
+2,"Mediator"
+2,"Practice Administrator"
+3,"Court reporter"
+3,"Technical Writer"
+3,"Dental hygienist"
+3,"Lab technician"
+3,"Marriage and family therapist"
+3,"Massage therapist"
+3,"Meeting planner"
+3,"Physical therapist assistant"
+4,"Information Technology Training Specialist"
+4,"Clergy"
+4,"Computer systems analyst"
+4,"Physician Assistant"
+4,"Occupational Therapist"
+4,"Information Technology Business Analyst"
+4,"Business Development Analyst"
+4,"Transportation Engineer"
+4,"Operations Research Analyst"
+4,"Construction Estimator"
+4,"Clinical Research Associate"
+4,"Information Technology Specialist"
+4,"Marketing Consultant"
+4,"Nurse Practitioner"
+4,"Social Worker"
+4,"Customer Service Manager"
+4,"Compensation Analyst"
+4,"Business Operations Manager"
+4,"Medical Case Manager"
+4,"Athletic trainer"
+4,"Curator"
+4,"Emergency management specialist"
+4,"Medical and public health social worker"
+4,"Training specialist"
+4,"Test Software Development Engineer"
+4,"Analyst"
+5,"Management Consultant"
+5,"Environmental Health & Safety Specialist"
+5,"Network Operations Project Manager"
+5,"Information Technology Consultant"
+5,"Information Technology Network Engineer"
+5,"Computer and Information Scientist"
+5,"Applications Engineer"
+5,"Human Resources Consultant"
+5,"Nursing Home Director"
+5,"Employment Recruiter"
+5,"General Sales Manager"
+5,"Technical Services Manager"
+5,"Sales Account Manager"
+5,"Rehabilitation Services Director"
+5,"Information Technology Systems Manager"
+5,"Outside Sales Manager"
+5,"Category Manager"
+5,"Practice Manager"
+5,"Environmental Project Manager"
+5,"Business Manager"
+5,"Information Technology Project Coordinator"
+5,"Web Project Manager"
+5,"Geographic Information Systems Analyst"
+5,"Security Director (Facilities, Personnel, etc.)"
+5,"Environmental engineering technician"
+5,"Environmental science technician"
+5,"Financial analyst"
+5,"Heating, air conditioning and refrigeration technician"
+5,"Hydrologist"
+5,"Multimedia artist"
+5,"Radiologic technologist"
+5,"Sales manager"
+5,"School psychologist"
+5,"Special-education teacher"
+5,"Public relations specialist"
+5,"Environmental Engineer"
+5,"Project Engineer"
+5,"Structural Engineer"
+5,"Systems Engineer"
+5,"Systems Administrator"
+5,"Web Developer"
+6,"Gaming manager"
+6,"Physical Therapist"
+6,"Product Manager"
+6,"Civil Engineer"
+6,"Database Administrator"
+6,"Certified Public Accountant (CPA)"
+6,"Biomedical Engineer"
+6,"Actuary"
+6,"Nurse Anesthetist"
+6,"Risk Management Manager"
+6,"Healthcare Consultant"
+6,"Information Systems Security Engineer"
+6,"Software Engineer / Web Engineer / Data Engineer / Computer Engineer / Programmer / Software Developer"
+6,"Information Technology Manager"
+6,"Telecommunications Network Engineer"
+6,"Construction Project Manager"
+6,"Information Technology Program Manager"
+6,"Research & Development Manager"
+6,"Regional Sales Manager"
+6,"Training Development Director"
+6,"Physical Therapy Director"
+6,"Healthcare Services Program Director"
+6,"Intensive Care Unit Nurse"
+6,"Tax Manager"
+6,"Statistician"
+6,"Accounting Director"
+6,"Auditing Manager"
+6,"Public Relations Director"
+6,"Clinical Services Director"
+6,"Director of Communications"
+6,"Construction Superintendent"
+6,"Senior Product Development Scientist"
+6,"Senior Data Analyst"
+6,"Obstetrician / Gynecologist"
+6,"Film and video editor"
+6,"Financial adviser"
+6,"Firefighter"
+6,"Logistician"
+6,"Meteorologist"
+6,"Registered nurse"
+6,"Pharmacist"
+7,"Sales Director"
+7,"Dentist"
+7,"Product Management Director"
+7,"Director of Nursing"
+7,"Psychiatrist"
+7,"Speech-Language Pathologist"
+7,"Optometrist"
+7,"Anesthesiologist"
+7,"Biotechnology Research Scientist"
+7,"Network architect"
+7,"Urban planner"
+7,"Veterinarian"
+7,"Investment Banker"
+7,"Director"
+8,"Architect"
+8,"Commercial pilot"
+8,"Software Architect"
+8,"Emergency Room Physician"
+8,"Senior Sales Executive"
+8,"Primary Care Physician"
+8,"Attorney / Lawyer"
+8,"General Surgeon"
+8,"Vice President / VP"
+9,"Senior Vice President / SVP"
+9,"CTO / Chief Technology Officer"
+9,"CIO / Chief Information Officer"
+9,"COO / Chief Operations Officer"
+9,"CFO / Chief Financial Officer"
+10,"President"
+10,"CEO / Chairman"

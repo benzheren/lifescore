@@ -1,263 +1,263 @@
-Rank,School,
-1,Harvard University,"Cambridge, MA"
-2,Princeton University,"Princeton, NJ"
-3,Yale University,"New Haven, CT"
-4,Columbia University,"New York, NY"
-5,Stanford University,"Stanford, CA"
-6,University of Pennsylvania,"Philadelphia, PA"
-7,California Institute of Technology,"Pasadena, CA"
-8,Massachusetts Institute of Technology,"Cambridge, MA"
-9,Dartmouth College,"Hanover, NH"
-10,Duke University,"Durham, NC"
-11,University of Chicago,"Chicago, IL"
-12,Northwestern University,"Evanston, IL"
-13,Johns Hopkins University,"Baltimore, MD"
-14,Washington University in St. Louis,"St. Louis, MO"
-15,Brown University,"Providence, RI"
-16,Cornell University,"Ithaca, NY"
-17,Rice University,"Houston, TX"
-18,Vanderbilt University,"Nashville, TN"
-19,University of Notre Dame,"Notre Dame, IN"
-20,Emory University,"Atlanta, GA"
-21,Georgetown University,"Washington, DC"
-22,University of California--Berkeley,"Berkeley, CA"
-23,Carnegie Mellon University,"Pittsburgh, PA"
-24,University of Southern California,"Los Angeles, CA"
-25,University of California--Los Angeles,"Los Angeles, CA"
-26,University of Virginia,"Charlottesville, VA"
-27,Wake Forest University,"Winston-Salem, NC"
-28,Tufts University,"Medford, MA"
-29,University of Michigan--Ann Arbor,"Ann Arbor, MI"
-30,University of North Carolina--Chapel Hill,"Chapel Hill, NC"
-31,Boston College,"Chestnut Hill, MA"
-32,College of William and Mary,"Williamsburg, VA"
-33,New York University,"New York, NY"
-34,Brandeis University,"Waltham, MA"
-35,Georgia Institute of Technology,"Atlanta, GA"
-36,University of California--San Diego,"La Jolla, CA"
-37,Lehigh University,"Bethlehem, PA"
-38,University of Rochester,"Rochester, NY"
-39,University of California--Davis,"Davis, CA"
-40,University of California--Santa Barbara,"Santa Barbara, CA"
-41,Case Western Reserve University,"Cleveland, OH"
-42,Rensselaer Polytechnic Institute,"Troy, NY"
-43,University of California--Irvine,"Irvine, CA"
-44,University of Washington,"Seattle, WA"
-45,University of Texas--Austin,"Austin, TX"
-46,University of Wisconsin--Madison,"Madison, WI"
-47,Pennsylvania State University--University Park,"University Park, PA"
-48,University of Illinois--Urbana-Champaign,"Champaign, IL"
-49,University of Miami,"Coral Gables, FL"
-50,Yeshiva University,"New York, NY"
-51,George Washington University,"Washington, DC"
-52,Tulane University,"New Orleans, LA"
-53,Pepperdine University,"Malibu, CA"
-54,University of Florida,"Gainesville, FL"
-55,Syracuse University,"Syracuse, NY"
-56,Boston University,"Boston, MA"
-57,Fordham University,"New York, NY"
-58,Ohio State University--Columbus,"Columbus, OH"
-59,Purdue University--West Lafayette,"West Lafayette, IN"
-60,Southern Methodist University,"Dallas, TX"
-61,University of Georgia,"Athens, GA"
-62,University of Maryland--College Park,"College Park, MD"
-63,Texas A&M University--College Station,"College Station, TX"
-64,Clemson University,"Clemson, SC"
-65,"Rutgers, the State University of New Jersey--New Brunswick","Piscataway, NJ"
-66,University of Minnesota--Twin Cities,"Minneapolis, MN"
-67,University of Pittsburgh,"Pittsburgh, PA"
-68,Worcester Polytechnic Institute,"Worcester, MA"
-69,Northeastern University,"Boston, MA"
-70,University of Connecticut,"Storrs, CT"
-71,Virginia Tech,"Blacksburg, VA"
-72,Colorado School of Mines,"Golden, CO"
-73,University of California--Santa Cruz,"Santa Cruz, CA"
-74,University of Iowa,"Iowa City, IA"
-75,Brigham Young University--Provo,"Provo, UT"
-76,Indiana University--Bloomington,"Bloomington, IN"
-77,Marquette University,"Milwaukee, WI"
-78,University of Delaware,"Newark, DE"
-79,American University,"Washington, DC"
-80,Baylor University,"Waco, TX"
-81,Miami University--Oxford,"Oxford, OH"
-82,Michigan State University,"East Lansing, MI"
-83,SUNY College of Environmental Science and Forestry,"Syracuse, NY"
-84,University of Alabama,"Tuscaloosa, AL"
-85,Auburn University,"Auburn University, AL"
-86,Binghamton University--SUNY,"Binghamton, NY"
-87,Clark University,"Worcester, MA"
-88,Drexel University,"Philadelphia, PA"
-89,Stevens Institute of Technology,"Hoboken, NJ"
-90,St. Louis University,"St. Louis, MO"
-91,University of Colorado--Boulder,"Boulder, CO"
-92,University of Denver,"Denver, CO"
-93,University of Tulsa,"Tulsa, OK"
-94,Iowa State University,"Ames, IA"
-95,University of California--Riverside,"Riverside, CA"
-96,University of Missouri,"Columbia, MO"
-97,University of San Diego,"San Diego, CA"
-98,University of Vermont,"Burlington, VT"
-99,Stony Brook University--SUNY,"Stony Brook, NY"
-100,Texas Christian University,"Fort Worth, TX"
-101,University of Dayton,"Dayton, OH"
-102,University of Massachusetts--Amherst,"Amherst, MA"
-103,University of the Pacific,"Stockton, CA"
-104,Florida State University,"Tallahassee, FL"
-105,Howard University,"Washington, DC"
-106,Samford University,"Birmingham, AL"
-107,University of Kansas,"Lawrence, KS"
-108,University of Nebraska--Lincoln,"Lincoln, NE"
-109,University of New Hampshire,"Durham, NH"
-110,University of Tennessee,"Knoxville, TN"
-111,Illinois Institute of Technology,"Chicago, IL"
-112,North Carolina State University--Raleigh,"Raleigh, NC"
-113,University of Oklahoma,"Norman, OK"
-114,University of Oregon,"Eugene, OR"
-115,University of South Carolina,"Columbia, SC"
-116,Washington State University,"Pullman, WA"
-117,Loyola University Chicago,"Chicago, IL"
-118,Michigan Technological University,"Houghton, MI"
-119,University of San Francisco,"San Francisco, CA"
-120,Catholic University of America,"Washington, DC"
-121,Duquesne University,"Pittsburgh, PA"
-122,University at Buffalo--SUNY,"Buffalo, NY"
-123,University of Arizona,"Tucson, AZ"
-124,Clarkson University,"Potsdam, NY"
-125,Colorado State University,"Fort Collins, CO"
-126,Louisiana State University--Baton Rouge,"Baton Rouge, LA"
-127,Ohio University,"Athens, OH"
-128,University of St. Thomas,"St. Paul, MN"
-129,Missouri University of Science & Technology,"Rolla, MO"
-130,University of Kentucky,"Lexington, KY"
-131,University of Utah,"Salt Lake City, UT"
-132,Kansas State University,"Manhattan, KS"
-133,Oklahoma State University,"Stillwater, OK"
-134,Temple University,"Philadelphia, PA"
-135,University of Arkansas,"Fayetteville, AR"
-136,DePaul University,"Chicago, IL"
-137,Seton Hall University,"South Orange, NJ"
-138,University of La Verne,"La Verne, CA"
-139,Hofstra University,"Hempstead, NY"
-140,New Jersey Institute of Technology,"Newark, NJ"
-141,New School,"New York, NY"
-142,Oregon State University,"Corvallis, OR"
-143,Arizona State University,"Tempe, AZ"
-144,George Mason University,"Fairfax, VA"
-145,"Rutgers, the State University of New Jersey--Newark","Newark, NJ"
-146,St. John's University,"Queens, NY"
-147,University at Albany--SUNY,"Albany, NY"
-148,University of Illinois--Chicago,"Chicago, IL"
-149,University of Mississippi,"University, MS"
-150,University of Texas--Dallas,"Richardson, TX"
-151,Mississippi State University,"Mississippi State, MS"
-152,University of Alabama--Birmingham,"Birmingham, AL"
-153,Polytechnic Institute of New York University,"Brooklyn, NY"
-154,University of Idaho,"Moscow, ID"
-155,University of Wyoming,"Laramie, WY"
-156,Illinois State University,"Normal, IL"
-157,Pacific University,"Forest Grove, OR"
-158,University of Cincinnati,"Cincinnati, OH"
-159,Adelphi University,"Garden City, NY"
-160,Florida Institute of Technology,"Melbourne, FL"
-161,Texas Tech University,"Lubbock, TX"
-162,University of Hawaii--Manoa,"Honolulu, HI"
-163,University of Maine,"Orono, ME"
-164,University of Maryland--Baltimore County,"Baltimore, MD"
-165,University of North Dakota,"Grand Forks, ND"
-166,Widener University,"Chester, PA"
-167,Azusa Pacific University,"Azusa, CA"
-168,University of Rhode Island,"Kingston, RI"
-169,Virginia Commonwealth University,"Richmond, VA"
-170,Biola University,"La Mirada, CA"
-171,Bowling Green State University,"Bowling Green, OH"
-172,George Fox University,"Newberg, OR"
-173,Pace University,"New York, NY"
-174,South Carolina State University,"Orangeburg, SC"
-175,Utah State University,"Logan, UT"
-176,Immaculata University,"Immaculata, PA"
-177,University of Louisville,"Louisville, KY"
-178,West Virginia University,"Morgantown, WV"
-179,Ball State University,"Muncie, IN"
-180,University of Alabama--Huntsville,"Huntsville, AL"
-181,University of Central Florida,"Orlando, FL"
-182,Western Michigan University,"Kalamazoo, MI"
-183,Kent State University,"Kent, OH"
-184,Montana State University,"Bozeman, MT"
-185,San Diego State University,"San Diego, CA"
-186,Southern Illinois University--Carbondale,"Carbondale, IL"
-187,St. Mary's University of Minnesota,"Winona, MN"
-188,University of Hartford,"West Hartford, CT"
-189,University of Massachusetts--Lowell,"Lowell, MA"
-190,University of South Florida,"Tampa, FL"
-191,Andrews University,"Berrien Springs, MI"
-192,North Dakota State University,"Fargo, ND"
-193,University of Colorado--Denver,"Denver, CO"
-194,University of Montana,"Missoula, MT"
-195,University of Nevada--Reno,"Reno, NV"
-196,University of North Carolina--Charlotte,"Charlotte, NC"
-197,University of North Carolina--Greensboro,"Greensboro, NC"
-Unranked,Barry University,"Miami Shores, FL"
-Unranked,Central Michigan University,"Mount Pleasant, MI"
-Unranked,Clark Atlanta University,"Atlanta, GA"
-Unranked,Cleveland State University,"Cleveland, OH"
-Unranked,East Carolina University,"Greenville, NC"
-Unranked,East Tennessee State University,"Johnson City, TN"
-Unranked,Florida A&M University,"Tallahassee, FL"
-Unranked,Florida Atlantic University,"Boca Raton, FL"
-Unranked,Florida International University,"Miami, FL"
-Unranked,Georgia Southern University,"Statesboro, GA"
-Unranked,Georgia State University,"Atlanta, GA"
-Unranked,Golden Gate University,"San Francisco, CA"
-Unranked,Idaho State University,"Pocatello, ID"
-Unranked,Indiana State University,"Terre Haute, IN"
-Unranked,Indiana University of Pennsylvania,"Indiana, PA"
-Unranked,Indiana University-Purdue University--Indianapolis,"Indianapolis, IN"
-Unranked,Jackson State University,"Jackson, MS"
-Unranked,Long Island University--C.W. Post Campus,"Brookville, NY"
-Unranked,Louisiana Tech University,"Ruston, LA"
-Unranked,Morgan State University,"Baltimore, MD"
-Unranked,New Mexico State University,"Las Cruces, NM"
-Unranked,North Carolina A&T State University,"Greensboro, NC"
-Unranked,Northern Arizona University,"Flagstaff, AZ"
-Unranked,Northern Illinois University,"DeKalb, IL"
-Unranked,Nova Southeastern University,"Ft. Lauderdale, FL"
-Unranked,Oakland University,"Rochester, MI"
-Unranked,Old Dominion University,"Norfolk, VA"
-Unranked,Oral Roberts University,"Tulsa, OK"
-Unranked,Portland State University,"Portland, OR"
-Unranked,Regent University,"Virginia Beach, VA"
-Unranked,South Dakota State University,"Brookings, SD"
-Unranked,Spalding University,"Louisville, KY"
-Unranked,Tennessee State University,"Nashville, TN"
-Unranked,Texas A&M University--Commerce,"Commerce, TX"
-Unranked,Texas A&M University--Kingsville,"Kingsville, TX"
-Unranked,Texas Woman's University,"Denton, TX"
-Unranked,Trevecca Nazarene University,"Nashville, TN"
-Unranked,Trinity International University,"Deerfield, IL"
-Unranked,University of Akron,"Akron, OH"
-Unranked,University of Alaska--Fairbanks,"Fairbanks, AK"
-Unranked,University of Arkansas--Little Rock,"Little Rock, AR"
-Unranked,University of Bridgeport,"Bridgeport, CT"
-Unranked,University of Houston,"Houston, TX"
-Unranked,University of Louisiana--Lafayette,"Lafayette, LA"
-Unranked,University of Massachusetts--Boston,"Boston, MA"
-Unranked,University of Memphis,"Memphis, TN"
-Unranked,University of Missouri--Kansas City,"Kansas City, MO"
-Unranked,University of Missouri--St. Louis,"St. Louis, MO"
-Unranked,University of Nevada--Las Vegas,"Las Vegas, NV"
-Unranked,University of New Mexico,"Albuquerque, NM"
-Unranked,University of New Orleans,"New Orleans, LA"
-Unranked,University of Northern Colorado,"Greeley, CO"
-Unranked,University of North Texas,"Denton, TX"
-Unranked,University of South Dakota,"Vermillion, SD"
-Unranked,University of Southern Mississippi,"Hattiesburg, MS"
-Unranked,University of Texas--Arlington,"Arlington, TX"
-Unranked,University of Texas--El Paso,"El Paso, TX"
-Unranked,University of Toledo,"Toledo, OH"
-Unranked,University of West Florida,"Pensacola, FL"
-Unranked,University of Wisconsin--Milwaukee,"Milwaukee, WI"
-Unranked,Wayne State University,"Detroit, MI"
-Unranked,Wichita State University,"Wichita, KS"
-Unranked,Wright State University,"Dayton, OH"
-Unranked,Union Institute and University,"Cincinnati, OH"
-Unranked,Wilmington University,"New Castle, DE"
+"Rank","School","Town","Alternate"
+1,"Harvard University","Cambridge, MA",
+2,"Princeton University","Princeton, NJ",
+3,"Yale University","New Haven, CT",
+4,"Columbia University","New York, NY",
+5,"Stanford University","Stanford, CA",
+6,"University of Pennsylvania","Philadelphia, PA","UPenn"
+7,"California Institute of Technology","Pasadena, CA","Caltech"
+8,"Massachusetts Institute of Technology","Cambridge, MA","MIT"
+9,"Dartmouth College","Hanover, NH",
+10,"Duke University","Durham, NC",
+11,"University of Chicago","Chicago, IL",
+12,"Northwestern University","Evanston, IL","NU "
+13,"Johns Hopkins University","Baltimore, MD","JHU "
+14,"Washington University in St. Louis","St. Louis, MO",
+15,"Brown University","Providence, RI",
+16,"Cornell University","Ithaca, NY",
+17,"Rice University","Houston, TX",
+18,"Vanderbilt University","Nashville, TN","Vandy "
+19,"University of Notre Dame","Notre Dame, IN",
+20,"Emory University","Atlanta, GA",
+21,"Georgetown University","Washington, DC",
+22,"University of California, Berkeley","Berkeley, CA","UC Berkeley"
+23,"Carnegie Mellon University","Pittsburgh, PA","CMU"
+24,"University of Southern California","Los Angeles, CA","USC"
+25,"University of California, Los Angeles","Los Angeles, CA","UCLA"
+26,"University of Virginia","Charlottesville, VA","UVA "
+27,"Wake Forest University","Winston-Salem, NC","WFU "
+28,"Tufts University","Medford, MA",
+29,"University of Michigan, Ann Arbor","Ann Arbor, MI",
+30,"University of North Carolina, Chapel Hill","Chapel Hill, NC","UNC"
+31,"Boston College","Chestnut Hill, MA","BC"
+32,"College of William and Mary","Williamsburg, VA",
+33,"New York University","New York, NY","NYU"
+34,"Brandeis University","Waltham, MA",
+35,"Georgia Institute of Technology","Atlanta, GA","Georgia Tech "
+36,"University of California, San Diego","La Jolla, CA","UCSD"
+37,"Lehigh University","Bethlehem, PA",
+38,"University of Rochester","Rochester, NY",
+39,"University of California, Davis","Davis, CA","UCD"
+40,"University of California, Santa Barbara","Santa Barbara, CA","UCSB"
+41,"Case Western Reserve University","Cleveland, OH","Reserve "
+42,"Rensselaer Polytechnic Institute","Troy, NY","RPI "
+43,"University of California, Irvine","Irvine, CA","UC Irvine"
+44,"University of Washington","Seattle, WA","U Dub "
+45,"University of Texas, Austin","Austin, TX",
+46,"University of Wisconsin, Madison","Madison, WI",
+47,"Pennsylvania State University, University Park","University Park, PA",
+48,"University of Illinois, Urbana-Champaign","Champaign, IL",
+49,"University of Miami","Coral Gables, FL",
+50,"Yeshiva University","New York, NY","YU "
+51,"George Washington University","Washington, DC",
+52,"Tulane University","New Orleans, LA",
+53,"Pepperdine University","Malibu, CA",
+54,"University of Florida","Gainesville, FL","UF "
+55,"Syracuse University","Syracuse, NY","Cuse "
+56,"Boston University","Boston, MA","BU "
+57,"Fordham University","New York, NY",
+58,"Ohio State University, Columbus","Columbus, OH",
+59,"Purdue University, West Lafayette","West Lafayette, IN",
+60,"Southern Methodist University","Dallas, TX","SMU "
+61,"University of Georgia","Athens, GA","UGA "
+62,"University of Maryland, College Park","College Park, MD",
+63,"Texas A&M University, College Station","College Station, TX",
+64,"Clemson University","Clemson, SC",
+65,"Rutgers, the State University of New Jersey, New Brunswick","Piscataway, NJ",
+66,"University of Minnesota, Twin Cities","Minneapolis, MN","UM "
+67,"University of Pittsburgh","Pittsburgh, PA","Pitt "
+68,"Worcester Polytechnic Institute","Worcester, MA","WPI "
+69,"Northeastern University","Boston, MA",
+70,"University of Connecticut","Storrs, CT","UConn "
+71,"Virginia Tech","Blacksburg, VA",
+72,"Colorado School of Mines","Golden, CO",
+73,"University of California, Santa Cruz","Santa Cruz, CA","UCSC"
+74,"University of Iowa","Iowa City, IA",
+75,"Brigham Young University, Provo","Provo, UT",
+76,"Indiana University, Bloomington","Bloomington, IN",
+77,"Marquette University","Milwaukee, WI",
+78,"University of Delaware","Newark, DE","UD "
+79,"American University","Washington, DC",
+80,"Baylor University","Waco, TX",
+81,"Miami University, Oxford","Oxford, OH",
+82,"Michigan State University","East Lansing, MI","MSU"
+83,"SUNY College of Environmental Science and Forestry","Syracuse, NY",
+84,"University of Alabama","Tuscaloosa, AL","UA "
+85,"Auburn University","Auburn University, AL","AU "
+86,"Binghamton University, SUNY","Binghamton, NY",
+87,"Clark University","Worcester, MA",
+88,"Drexel University","Philadelphia, PA",
+89,"Stevens Institute of Technology","Hoboken, NJ",
+90,"St. Louis University","St. Louis, MO",
+91,"University of Colorado, Boulder","Boulder, CO",
+92,"University of Denver","Denver, CO",
+93,"University of Tulsa","Tulsa, OK",
+94,"Iowa State University","Ames, IA",
+95,"University of California, Riverside","Riverside, CA","UC Riverside"
+96,"University of Missouri","Columbia, MO","Mizzou "
+97,"University of San Diego","San Diego, CA","USD "
+98,"University of Vermont","Burlington, VT","UVM "
+99,"Stony Brook University, SUNY","Stony Brook, NY",
+100,"Texas Christian University","Fort Worth, TX","TCU "
+101,"University of Dayton","Dayton, OH",
+102,"University of Massachusetts, Amherst","Amherst, MA",
+103,"University of the Pacific","Stockton, CA","UP "
+104,"Florida State University","Tallahassee, FL",
+105,"Howard University","Washington, DC","HU "
+106,"Samford University","Birmingham, AL",
+107,"University of Kansas","Lawrence, KS","KU "
+108,"University of Nebraska, Lincoln","Lincoln, NE","UNL "
+109,"University of New Hampshire","Durham, NH","UNH "
+110,"University of Tennessee","Knoxville, TN","UT "
+111,"Illinois Institute of Technology","Chicago, IL","IIT "
+112,"North Carolina State University, Raleigh","Raleigh, NC",
+113,"University of Oklahoma","Norman, OK","OU "
+114,"University of Oregon","Eugene, OR","UO "
+115,"University of South Carolina","Columbia, SC",
+116,"Washington State University","Pullman, WA","Wazzu "
+117,"Loyola University Chicago","Chicago, IL","LUC "
+118,"Michigan Technological University","Houghton, MI",
+119,"University of San Francisco","San Francisco, CA","USF "
+120,"Catholic University of America","Washington, DC",
+121,"Duquesne University","Pittsburgh, PA",
+122,"University at Buffalo, SUNY","Buffalo, NY",
+123,"University of Arizona","Tucson, AZ","U of A "
+124,"Clarkson University","Potsdam, NY",
+125,"Colorado State University","Fort Collins, CO","CSU "
+126,"Louisiana State University, Baton Rouge","Baton Rouge, LA",
+127,"Ohio University","Athens, OH",
+128,"University of St. Thomas","St. Paul, MN",
+129,"Missouri University of Science & Technology","Rolla, MO",
+130,"University of Kentucky","Lexington, KY","UK "
+131,"University of Utah","Salt Lake City, UT","The U "
+132,"Kansas State University","Manhattan, KS","KSU "
+133,"Oklahoma State University","Stillwater, OK",
+134,"Temple University","Philadelphia, PA","TU "
+135,"University of Arkansas","Fayetteville, AR",
+136,"DePaul University","Chicago, IL",
+137,"Seton Hall University","South Orange, NJ",
+138,"University of La Verne","La Verne, CA",
+139,"Hofstra University","Hempstead, NY",
+140,"New Jersey Institute of Technology","Newark, NJ",
+141,"New School","New York, NY",
+142,"Oregon State University","Corvallis, OR",
+143,"Arizona State University","Tempe, AZ","ASU "
+144,"George Mason University","Fairfax, VA","GMU "
+145,"Rutgers, the State University of New Jersey, Newark","Newark, NJ",
+146,"St. John's University","Queens, NY",
+147,"University at Albany, SUNY","Albany, NY",
+148,"University of Illinois, Chicago","Chicago, IL","UIC"
+149,"University of Mississippi","University, MS","Ole Miss "
+150,"University of Texas, Dallas","Richardson, TX",
+151,"Mississippi State University","Mississippi State, MS",
+152,"University of Alabama, Birmingham","Birmingham, AL",
+153,"Polytechnic Institute of New York University","Brooklyn, NY",
+154,"University of Idaho","Moscow, ID",
+155,"University of Wyoming","Laramie, WY",
+156,"Illinois State University","Normal, IL","ISU "
+157,"Pacific University","Forest Grove, OR",
+158,"University of Cincinnati","Cincinnati, OH",
+159,"Adelphi University","Garden City, NY",
+160,"Florida Institute of Technology","Melbourne, FL",
+161,"Texas Tech University","Lubbock, TX",
+162,"University of Hawaii, Manoa","Honolulu, HI",
+163,"University of Maine","Orono, ME",
+164,"University of Maryland, Baltimore County","Baltimore, MD",
+165,"University of North Dakota","Grand Forks, ND","UND "
+166,"Widener University","Chester, PA",
+167,"Azusa Pacific University","Azusa, CA",
+168,"University of Rhode Island","Kingston, RI","URI "
+169,"Virginia Commonwealth University","Richmond, VA","VCU "
+170,"Biola University","La Mirada, CA",
+171,"Bowling Green State University","Bowling Green, OH","BG "
+172,"George Fox University","Newberg, OR",
+173,"Pace University","New York, NY",
+174,"South Carolina State University","Orangeburg, SC","SCSU "
+175,"Utah State University","Logan, UT",
+176,"Immaculata University","Immaculata, PA",
+177,"University of Louisville","Louisville, KY",
+178,"West Virginia University","Morgantown, WV","WVU "
+179,"Ball State University","Muncie, IN",
+180,"University of Alabama, Huntsville","Huntsville, AL",
+181,"University of Central Florida","Orlando, FL",
+182,"Western Michigan University","Kalamazoo, MI","WMU "
+183,"Kent State University","Kent, OH",
+184,"Montana State University","Bozeman, MT",
+185,"San Diego State University","San Diego, CA","SDSU "
+186,"Southern Illinois University, Carbondale","Carbondale, IL",
+187,"St. Mary's University of Minnesota","Winona, MN",
+188,"University of Hartford","West Hartford, CT",
+189,"University of Massachusetts, Lowell","Lowell, MA",
+190,"University of South Florida","Tampa, FL",
+191,"Andrews University","Berrien Springs, MI",
+192,"North Dakota State University","Fargo, ND","NDSU "
+193,"University of Colorado, Denver","Denver, CO",
+194,"University of Montana","Missoula, MT",
+195,"University of Nevada, Reno","Reno, NV",
+196,"University of North Carolina, Charlotte","Charlotte, NC","UNC Charlotte"
+197,"University of North Carolina, Greensboro","Greensboro, NC","UNC Greensboro"
+"Unranked","Barry University","Miami Shores, FL",
+"Unranked","Central Michigan University","Mount Pleasant, MI",
+"Unranked","Clark Atlanta University","Atlanta, GA",
+"Unranked","Cleveland State University","Cleveland, OH","CSU "
+"Unranked","East Carolina University","Greenville, NC","ECU "
+"Unranked","East Tennessee State University","Johnson City, TN","ETSU "
+"Unranked","Florida A&M University","Tallahassee, FL","FAMU "
+"Unranked","Florida Atlantic University","Boca Raton, FL","FAU "
+"Unranked","Florida International University","Miami, FL","FIU "
+"Unranked","Georgia Southern University","Statesboro, GA","GSU "
+"Unranked","Georgia State University","Atlanta, GA",
+"Unranked","Golden Gate University","San Francisco, CA",
+"Unranked","Idaho State University","Pocatello, ID",
+"Unranked","Indiana State University","Terre Haute, IN",
+"Unranked","Indiana University of Pennsylvania","Indiana, PA","IUP "
+"Unranked","Indiana University-Purdue University, Indianapolis","Indianapolis, IN",
+"Unranked","Jackson State University","Jackson, MS",
+"Unranked","Long Island University, C.W. Post Campus","Brookville, NY",
+"Unranked","Louisiana Tech University","Ruston, LA",
+"Unranked","Morgan State University","Baltimore, MD",
+"Unranked","New Mexico State University","Las Cruces, NM","NMSU "
+"Unranked","North Carolina A&T State University","Greensboro, NC","A&T "
+"Unranked","Northern Arizona University","Flagstaff, AZ","NAU "
+"Unranked","Northern Illinois University","DeKalb, IL",
+"Unranked","Nova Southeastern University","Ft. Lauderdale, FL",
+"Unranked","Oakland University","Rochester, MI",
+"Unranked","Old Dominion University","Norfolk, VA","ODU "
+"Unranked","Oral Roberts University","Tulsa, OK","ORU "
+"Unranked","Portland State University","Portland, OR",
+"Unranked","Regent University","Virginia Beach, VA",
+"Unranked","South Dakota State University","Brookings, SD",
+"Unranked","Spalding University","Louisville, KY",
+"Unranked","Tennessee State University","Nashville, TN",
+"Unranked","Texas A&M University, Commerce","Commerce, TX",
+"Unranked","Texas A&M University, Kingsville","Kingsville, TX",
+"Unranked","Texas Woman's University","Denton, TX",
+"Unranked","Trevecca Nazarene University","Nashville, TN",
+"Unranked","Trinity International University","Deerfield, IL",
+"Unranked","University of Akron","Akron, OH",
+"Unranked","University of Alaska, Fairbanks","Fairbanks, AK",
+"Unranked","University of Arkansas, Little Rock","Little Rock, AR",
+"Unranked","University of Bridgeport","Bridgeport, CT",
+"Unranked","University of Houston","Houston, TX","U of H "
+"Unranked","University of Louisiana, Lafayette","Lafayette, LA",
+"Unranked","University of Massachusetts, Boston","Boston, MA",
+"Unranked","University of Memphis","Memphis, TN",
+"Unranked","University of Missouri, Kansas City","Kansas City, MO","UMKC "
+"Unranked","University of Missouri, St. Louis","St. Louis, MO",
+"Unranked","University of Nevada, Las Vegas","Las Vegas, NV",
+"Unranked","University of New Mexico","Albuquerque, NM","UNM "
+"Unranked","University of New Orleans","New Orleans, LA",
+"Unranked","University of Northern Colorado","Greeley, CO",
+"Unranked","University of North Texas","Denton, TX","UNT "
+"Unranked","University of South Dakota","Vermillion, SD",
+"Unranked","University of Southern Mississippi","Hattiesburg, MS",
+"Unranked","University of Texas, Arlington","Arlington, TX","UTA "
+"Unranked","University of Texas, El Paso","El Paso, TX",
+"Unranked","University of Toledo","Toledo, OH",
+"Unranked","University of West Florida","Pensacola, FL","UWF "
+"Unranked","University of Wisconsin, Milwaukee","Milwaukee, WI",
+"Unranked","Wayne State University","Detroit, MI",
+"Unranked","Wichita State University","Wichita, KS",
+"Unranked","Wright State University","Dayton, OH",
+"Unranked","Union Institute and University","Cincinnati, OH",
+"Unranked","Wilmington University","New Castle, DE",
