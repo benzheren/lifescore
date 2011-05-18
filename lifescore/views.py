@@ -24,13 +24,13 @@ def my_view(request):
         user = dbsession.query(User).filter(User.fb_id==fb_id).first()
         if not user:
             user = User(fb_id, cookie['access_token'], profile['updated_time'],
-                       get_lifescore(graph.get_object('me')))
+                       get_lifescore(profile))
             dbsession.add(user)
             dbsession.commit()
         elif user.fb_access_token != cookie['access_token']:
             user.fb_access_token = cookie['access_token']
             if user.fb_updated_time != profile['update_time']:
-                user.score = get_lifescore(graph.get_object('me'))
+                user.score = get_lifescore(profile)
             dbsession.merge(user)
             dbsession.commit()
  
