@@ -1,7 +1,6 @@
 import os
 import sys
 
-import MySQLdb
 from paver.easy import *
 import paver.doctools
 from paver.setuputils import setup, find_package_data
@@ -60,12 +59,17 @@ options(
 
 @task
 def create_db_and_user():
-    db = MySQLdb.connect(host=options.DB.host, user=options.DB.user,
-            passwd=options.DB.password, db='')
-    cursor = db.cursor()
-    cursor.execute("""CREATE DATABASE IF NOT EXISTS lifescore DEFAULT CHARACTER SET
-            'utf8' DEFAULT COLLATE 'utf8_bin'""")
-    cursor.execute("""GRANT ALL PRIVILEGES ON lifescore.* to
-            'lifescore'@'localhost'""")
-    cursor.execute("""SET PASSWORD FOR 'lifescore'@'localhost' = PASSWORD('5mad_cows')""")
+    try:
+        import MySQLdb
+    except ImportError:
+        print 'ERROR: please install MySQL-python lib first...'
+    else:
+        db = MySQLdb.connect(host=options.DB.host, user=options.DB.user,
+                passwd=options.DB.password, db='')
+        cursor = db.cursor()
+        cursor.execute("""CREATE DATABASE IF NOT EXISTS lifescore DEFAULT CHARACTER SET
+                'utf8' DEFAULT COLLATE 'utf8_bin'""")
+        cursor.execute("""GRANT ALL PRIVILEGES ON lifescore.* to
+                'lifescore'@'localhost'""")
+        cursor.execute("""SET PASSWORD FOR 'lifescore'@'localhost' = PASSWORD('5mad_cows')""")
 
