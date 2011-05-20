@@ -5,7 +5,7 @@ from lifescore.models import User
 from lifescore.models import DBSession
 
 @view_config(route_name='home', renderer='home.mak')
-def my_view(request):
+def home(request):
     dbsession = DBSession()
     settings = request.registry.settings
     fb_perms = ['user_education_history', 'friends_education_history',
@@ -38,6 +38,11 @@ def my_view(request):
 
     return dict(facebook_app_id=settings['facebook.app.id'], facebook_perms=\
                 ','.join(fb_perms))
+
+@view_config(route_name='dashboard', renderer='dashboard.mak')
+def dashboard(request):
+    fb_id = request.matchdict['fb_id']
+    return dict(fb_id=fb_id)
 
 def get_lifescore_influenced(graph):
     ## on my local machine, it took about 3m22s to process all 508 friends

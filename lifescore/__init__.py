@@ -12,6 +12,7 @@ def main(global_config, **settings):
     config.scan()
     config.add_static_view('static', 'lifescore:static')
     config.add_route('home', '/')
+    config.add_route('dashboard', '/{fb_id}')
     return config.make_wsgi_app()
 
 
