@@ -1,7 +1,14 @@
 <%inherit file="base.mak"/>
-<div>
-	<fb:login-button perms="${facebook_perms}">Connect Your Facebook Account</fb:login-button>
-</div>
+% if dashboard_url:
+	<div>
+		<a href="${dashboard_url}">go to your score</a>
+	</div>
+% else:
+	<div>
+		<fb:login-button perms="${facebook_perms}">Connect Your Facebook Account</fb:login-button>
+	</div>
+% endif
+
 <div id="fb-root"></div>
 <script>
 	window.fbAsyncInit = function() {

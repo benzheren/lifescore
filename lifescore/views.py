@@ -1,5 +1,6 @@
 import facebook
 from pyramid.view import view_config
+from pyramid.url import route_url
 
 from lifescore.models import User
 from lifescore.models import DBSession
@@ -17,6 +18,26 @@ def home(request):
     cookie = facebook.get_user_from_cookie(request.cookies,
                                            settings['facebook.app.id'],
                                            settings['facebook.app.secret'])
+
+    if cookie:
+        print 'cookie is here'
+        graph = facebook.GraphAPI(cookie['access_token'])
+        profile = graph.get_object('me')
+        dashboard_url = route_url('dashboard', request, fb_id=profile['id'])
+        request.response_cookies = request.cookies
+        return dict(dashboard_url=dashboard_url, 
+                    facebook_app_id=settings['facebook.app.id'])
+    else:
+        return dict(facebook_app_id=settings['facebook.app.id'], 
+                    facebook_perms=','.join(fb_perms))
+
+@view_config(route_name='dashboard', renderer='dashboard.mak')
+def dashboard(request):
+    dbsession = DBSession()
+    settings = request.registry.settings
+    cookie = facebook.get_user_from_cookie(request.cookies,
+                                           settings['facebook.app.id'],
+                                           settings['facebook.app.secret'])
     if cookie:
         graph = facebook.GraphAPI(cookie['access_token'])
         profile = graph.get_object('me')
@@ -27,25 +48,28 @@ def home(request):
                        get_lifescore(profile))
             dbsession.add(user)
             dbsession.commit()
+            print get_friends_id(graph)
+            return dict(fb_id=fb_id,
+                        friends_id=get_friends_id(graph).encode('ascii', 'ignore'))
         elif user.fb_access_token != cookie['access_token']:
             user.fb_access_token = cookie['access_token']
             if user.fb_updated_time != profile['update_time']:
                 user.score = get_lifescore(profile)
             dbsession.merge(user)
             dbsession.commit()
- 
-    request.response_cookies = request.cookies
-
-    return dict(facebook_app_id=settings['facebook.app.id'], facebook_perms=\
-                ','.join(fb_perms))
-
-@view_config(route_name='dashboard', renderer='dashboard.mak')
-def dashboard(request):
-    fb_id = request.matchdict['fb_id']
+            #fecth existing data from db and return the dashboard
+    else:
+        # need redirect to a 404 error page
+        fb_id = 'no cookie'
+        pass
+    
     return dict(fb_id=fb_id)
 
+def get_friends_id(graph):
+    return ','.join([f['id'] for f in graph.get_connections('me',
+                                                            'friends')['data']])
+
 def get_lifescore_influenced(graph):
-    ## on my local machine, it took about 3m22s to process all 508 friends
     score = get_lifescore(graph.get_object('me'))
     friends = graph.get_connections('me', 'friends')['data']
     for f in friends:
