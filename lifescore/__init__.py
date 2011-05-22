@@ -12,7 +12,7 @@ def main(global_config, **settings):
     config.scan()
     config.add_static_view('static', 'lifescore:static')
     config.add_route('home', '/')
-    config.add_route('dashboard', '/{fb_id}')
+    config.add_route('dashboard', '/profile/{fb_id}')
     config.add_route('fetch_friends', '/fetch_friends')
     return config.make_wsgi_app()
 

@@ -16,7 +16,7 @@
 			xfbml: true});
 		FB.Event.subscribe('auth.login', function(response) {
 			FB.api('/me', function(response){
-				window.location.replace('/' + response.id);
+				window.location.replace('/profile/' + response.id);
 			});
 		});
 	};
