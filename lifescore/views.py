@@ -65,6 +65,10 @@ def dashboard(request):
     
     return dict(fb_id=fb_id)
 
+@view_config(route_name='fetch_friends', renderer='json')
+def fetch_friends(request):
+    pass
+
 def get_friends_id(graph):
     return ','.join([f['id'] for f in graph.get_connections('me',
                                                             'friends')['data']])
