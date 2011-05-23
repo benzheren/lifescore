@@ -5,8 +5,7 @@ ${fb_id}
 	<script type="text/javascript">
 		var friends_id = ${friends_id.__repr__()|n}.split(","),
 		    length = friends_id.length,
-		    size = friends_id.length/20,
-		    i = 0;
+		    size = friends_id.length/20;
 
 		for (var i=0; i<=size; i++) {
 			if ((i+1) * 20 > length) {
