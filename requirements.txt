@@ -8,7 +8,7 @@ zope.sqlalchemy
 WebError
 
 MySQL-python
--e https://github.com/facebook/python-sdk.git
+-e git+https://github.com/facebook/python-sdk.git@master#egg=lifescore
 Beaker
 pyramid_beaker
 
