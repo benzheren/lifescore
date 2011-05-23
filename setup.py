@@ -16,6 +16,8 @@ requires = [
     'WebError',
     'facebook-python-sdk',
     'python-memcached',
+    'Beaker',
+    'pyramid_beaker',
     ]
 
 if sys.version_info[:3] < (2,5,0):
