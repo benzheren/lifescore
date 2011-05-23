@@ -1,4 +1,6 @@
+from beaker.cache import cache_region
 import facebook
+import memcache
 from pyramid.view import view_config
 from pyramid.url import route_url
 
@@ -20,7 +22,6 @@ def home(request):
                                            settings['facebook.app.secret'])
 
     if cookie:
-        print 'cookie is here'
         graph = facebook.GraphAPI(cookie['access_token'])
         profile = graph.get_object('me')
         dashboard_url = route_url('dashboard', request, fb_id=profile['id'])
@@ -39,16 +40,15 @@ def dashboard(request):
                                            settings['facebook.app.id'],
                                            settings['facebook.app.secret'])
     if cookie:
-        graph = facebook.GraphAPI(cookie['access_token'])
+        graph = get_graph(cookie['access_token'])
         profile = graph.get_object('me')
         fb_id = profile['id']
         user = dbsession.query(User).filter(User.fb_id==fb_id).first()
         if not user:
             user = User(fb_id, cookie['access_token'], profile['updated_time'],
-                       get_lifescore(profile))
+                       get_lifescore(profile), )
             dbsession.add(user)
             dbsession.commit()
-            print get_friends_id(graph)
             return dict(fb_id=fb_id,
                         friends_id=get_friends_id(graph).encode('ascii', 'ignore'))
         elif user.fb_access_token != cookie['access_token']:
@@ -67,12 +67,24 @@ def dashboard(request):
 
 @view_config(route_name='fetch_friends', renderer='json')
 def fetch_friends(request):
-    pass
+    friends_id = request.GET['friends_id']
+    user = get_user_from_fb_id(request.GET['fb_id'])
+    graph = get_graph(user.fb_access_token)
+    friends = graph.get_objects(friends_id.split(','))
+    return friends
+
+@cache_region('short_term', 'graph')
+def get_graph(access_token):
+    return facebook.GraphAPI(access_token)
+
+@cache_region('short_term', 'user_in_db')
+def get_user_from_fb_id(fb_id):
+    dbsession = DBSession()
+    return dbsession.query(User).filter(User.fb_id==fb_id).first()
 
 def get_friends_id(graph):
     return ','.join([f['id'] for f in graph.get_connections('me',
                                                             'friends')['data']])
-
 def get_lifescore_influenced(graph):
     score = get_lifescore(graph.get_object('me'))
     friends = graph.get_connections('me', 'friends')['data']
