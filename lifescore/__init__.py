@@ -1,3 +1,4 @@
+from pyramid_beaker import set_cache_regions_from_settings
 from pyramid.config import Configurator
 from sqlalchemy import engine_from_config
 
@@ -8,6 +9,7 @@ def main(global_config, **settings):
     """
     engine = engine_from_config(settings, 'sqlalchemy.')
     initialize_sql(engine)
+    set_cache_regions_from_settings(settings)
     config = Configurator(settings=settings)
     config.scan()
     config.add_static_view('static', 'lifescore:static')
