@@ -1,0 +1,14 @@
+Paver
+
+pyramid
+SQLAlchemy
+transaction
+repoze.tm2>=1.0b1
+zope.sqlalchemy
+WebError
+
+MySQL-python
+-e https://github.com/facebook/python-sdk.git
+Beaker
+pyramid_beaker
+
