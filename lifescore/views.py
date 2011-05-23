@@ -85,6 +85,7 @@ def get_user_from_fb_id(fb_id):
 def get_friends_id(graph):
     return ','.join([f['id'] for f in graph.get_connections('me',
                                                             'friends')['data']])
+
 def get_lifescore_influenced(graph):
     score = get_lifescore(graph.get_object('me'))
     friends = graph.get_connections('me', 'friends')['data']
