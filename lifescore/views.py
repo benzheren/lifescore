@@ -71,7 +71,8 @@ def fetch_friends(request):
     user = get_user_from_fb_id(request.GET['fb_id'])
     graph = get_graph(user.fb_access_token)
     friends = graph.get_objects(friends_id.split(','))
-    return friends
+    return [dict(id=f['id'], score=get_lifescore(f)) for f in
+            friends.itervalues()]
 
 @cache_region('short_term', 'graph')
 def get_graph(access_token):

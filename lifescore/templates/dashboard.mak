@@ -1,5 +1,6 @@
 <%inherit file="base.mak"/>
 ${fb_id}
+<div id="rank"></div>
 % if friends_id:
 	<script type="text/javascript">
 		var friends_id = ${friends_id.__repr__()|n}.split(","),
@@ -25,7 +26,11 @@ ${fb_id}
 		}
 
 		function fetch_friends_callback(data) {
-			
+			$.each(data, function(index, value){
+				$('#rank').append('<p><img src=\"http://graph.facebook.com/' + 
+						  value.id +
+						  '/picture?type=small\"></p>')
+			});	
 		}
 	</script>
 % endif
