@@ -46,7 +46,7 @@ class WorldSchools(Base):
     id = Column(Integer, primary_key=True)
     rank = Column(Integer)
     name = Column(Unicode(255))
-    city = Column(Unicode(255))
+    country = Column(Unicode(255))
     short_name = Column(Unicode(255))
 
 def initialize_sql(engine):
