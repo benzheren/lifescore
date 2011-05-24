@@ -7,6 +7,13 @@ from pyramid.url import route_url
 from lifescore.models import User
 from lifescore.models import DBSession
 
+
+RELATIONSHIPS = {'Single': 1, 'In a relationship': 1.1, 'Engaged': 1.2, 
+                     'Married': 1.3, 'It\'s complicated': 0.9, 
+                     'In an open relationship': 0.9, 'Windowed': 1,
+                     'Separated': 0.8, 'Divorced': 0.7, 
+                     'In a civil union': 1.3, 'In a domestic partnership': 1.3}
+
 @view_config(route_name='home', renderer='home.mak')
 def home(request):
     dbsession = DBSession()
@@ -95,11 +102,30 @@ def get_lifescore_influenced(graph):
     return score
 
 def get_lifescore(profile):
-    #schools = profile['education']
-    ## if you do not have the information, the key does not exist
-    #employers = profile['work']
-    #relationship = profile['relationship_status']
+    score = (get_education_score(profile) + get_work_score(profile)) * \
+            get_relatonship_score(profile) * get_family_score(profile)
     #location = profile['location']
     #gender = profile['gender']
+    return score
+
+def get_education_score(profile):
+    try:
+        schools = profile['education']
+    except KeyError:
+        return 0
+
+def get_work_score(profile):
+    try:
+        employers = profile['work']
+    except KeyError:
+        return 0;
+
+def get_relationship_score(profile):
+    try:
+        return RELATIONSHIPS[profile['relationship_status']]
+    except KeyError:
+        return 1
+
+def get_family_score(profile):
     return 1
 
