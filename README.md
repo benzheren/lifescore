@@ -11,3 +11,6 @@ Assume that you are using Mac OS X Snow Leopard (this means you will have python
 4. Then you can install all required library by running `pip install -r requirements.txt`
 5. Initialize the mysql database by running `paver create_db_and_user`
 
+### Tips for MySQL import
+* `mysqlimport -u root --fields-terminated-by=',' --fields-optionally-enclosed-by='"' --lines-terminated-by='\r\n' --verbose --columns=rank,name,city,short_name --local lifescore world_schools.csv`
+
