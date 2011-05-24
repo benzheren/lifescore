@@ -38,7 +38,16 @@ class NationalSchools(Base):
     rank = Column(Integer)
     name = Column(Unicode(255))
     city = Column(Unicode(255))
+    short_name = Column(Unicode(255))
 
+class WorldSchools(Base):
+    __tablename__ = 'world_schools'
+
+    id = Column(Integer, primary_key=True)
+    rank = Column(Integer)
+    name = Column(Unicode(255))
+    city = Column(Unicode(255))
+    short_name = Column(Unicode(255))
 
 def initialize_sql(engine):
     DBSession.configure(bind=engine)
