@@ -1,0 +1,63 @@
+body {
+	background:#ccc;	
+}
+
+.header {
+	display:block;
+	width:100%;
+}
+
+ul.top-menu {
+	display:block;
+	overflow:hidden;
+	list-style:none;
+}
+ul.top-menu li {
+	float:left;
+}
+
+ul.top-menu li a {
+	dislay:block;
+	width: 100%;
+}
+
+.content {
+position: relative;
+width:950px;
+height: 150px;
+padding: 0;
+margin:0 auto;
+border: 1px solid #efefef;
+background: #fff;
+
+}
+
+
+.content:before,
+.content:after {
+content: '';
+z-index: -1;
+position: absolute;
+left: 20px;
+bottom:20px;
+width: 70%;
+max-width: 800px; /* avoid rotation causing ugly appearance at large container widths */
+height: 55%;
+-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+-webkit-transform: skew(-15deg) rotate(-2deg);
+-moz-transform: skew(-15deg) rotate(-2deg);
+-ms-transform: skew(-15deg) rotate(-2deg);
+-o-transform: skew(-15deg) rotate(-2deg);
+transform: skew(-15deg) rotate(-2deg); }
+
+
+.content:after {
+left: auto;
+right: 20px;
+-webkit-transform: skew(15deg) rotate(2deg);
+-moz-transform: skew(15deg) rotate(2deg);
+-ms-transform: skew(15deg) rotate(2deg);
+-o-transform: skew(15deg) rotate(2deg);
+transform: skew(15deg) rotate(2deg); }	
