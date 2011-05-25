@@ -1,3 +1,5 @@
+import random
+
 from beaker.cache import cache_region
 import facebook
 import memcache
@@ -106,7 +108,7 @@ def get_lifescore(profile):
             get_relationship_score(profile) * get_family_score(profile)
     #location = profile['location']
     #gender = profile['gender']
-    return 1
+    return random.randint(400, 850)
 
 def get_education_score(profile):
     try:
