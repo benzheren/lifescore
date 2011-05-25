@@ -102,11 +102,11 @@ def get_lifescore_influenced(graph):
     return score
 
 def get_lifescore(profile):
-    score = (get_education_score(profile) + get_work_score(profile)) * \
-            get_relatonship_score(profile) * get_family_score(profile)
+    #score = (get_education_score(profile) + get_work_score(profile)) * \
+    #        get_relatonship_score(profile) * get_family_score(profile)
     #location = profile['location']
     #gender = profile['gender']
-    return score
+    return 1
 
 def get_education_score(profile):
     try:
