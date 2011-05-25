@@ -120,19 +120,24 @@ def get_education_score(profile):
 @cache_region('long_term', 'single_school_rank')
 def get_school_rank(name):
     try:
-        rank = get_all_national_schools()['names'].index(name)
+        national_rank = get_all_national_schools()['names'].index(name)
     except ValueError:
         try:
-            rank = get_all_national_schools()['short_names'].index(name)
+            national_rank = get_all_national_schools()['short_names'].index(name)
         except ValueError:
-            try:
-                rank = get_all_world_schools()['names'].index(name)
-            except ValueError:
-                try:
-                    rank = get_all_world_schools()['short_names'].index(name)
-                except ValueError:
-                    return 0
-    return 500 - rank
+            national_rank = 500
+    try:
+        world_rank = get_all_world_schools()['names'].index(name)
+    except ValueError:
+        try:
+            world_rank = get_all_world_schools()['short_names'].index(name)
+        except ValueError:
+            world_rank = 500
+
+    if national_rank < world_rank:
+        return 500 - national_rank
+    else:
+        return 500 - world_rank
 
 @cache_region('long_term', 'world_schools')
 def get_all_world_schools():

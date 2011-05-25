@@ -56,6 +56,13 @@ class WorldSchools(Base):
     country = Column(Unicode(255))
     short_name = Column(Unicode(255))
 
+    def __init__(self, rank=None, name=None, country=None, short_name=None):
+        self.rank = rank
+        self.name = name 
+        self.country = country
+        self.short_name = short_name
+
+
 def initialize_sql(engine):
     DBSession.configure(bind=engine)
     Base.metadata.bind = engine
