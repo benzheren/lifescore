@@ -4,7 +4,7 @@ import memcache
 from pyramid.view import view_config
 from pyramid.url import route_url
 
-from lifescore.models import User
+from lifescore.models import User, NationalSchools, WorldSchools
 from lifescore.models import DBSession
 
 
@@ -102,8 +102,8 @@ def get_lifescore_influenced(graph):
     return score
 
 def get_lifescore(profile):
-    #score = (get_education_score(profile) + get_work_score(profile)) * \
-    #        get_relatonship_score(profile) * get_family_score(profile)
+    score = (get_education_score(profile) + get_work_score(profile)) * \
+            get_relationship_score(profile) * get_family_score(profile)
     #location = profile['location']
     #gender = profile['gender']
     return 1
@@ -111,12 +111,49 @@ def get_lifescore(profile):
 def get_education_score(profile):
     try:
         schools = profile['education']
+        return 0
     except KeyError:
         return 0
+
+@cache_region('long_term', 'single_school_rank')
+def get_school_rank(name):
+    try:
+        rank = get_all_national_schools()['names'].index(name)
+    except ValueError:
+        try:
+            rank = get_all_national_schools()['short_names'].index(name)
+        except ValueError:
+            try:
+                rank = get_all_world_schools()['names'].index(name)
+            except ValueError:
+                try:
+                    rank = get_all_world_schools()['short_names'].index(name)
+                except ValueError:
+                    return 0
+    return 500 - rank
+
+@cache_region('long_term', 'world_schools')
+def get_all_world_schools():
+    dbsession = DBSession()
+    schools = dbsession.query(WorldSchools.rank, WorldSchools.name,
+                    WorldSchools.short_name).all()
+    names = [s.name for s in schools]
+    short_names = [s.short_name for s in schools]
+    return dict(names=names, short_names=short_names)
+
+@cache_region('long_term', 'national_schools')
+def get_all_national_schools():
+    dbsession = DBSession()
+    schools = dbsession.query(NationalSchools.rank, NationalSchools.name,
+                    NationalSchools.short_name).all()
+    names = [s.name for s in schools]
+    short_names = [s.short_name for s in schools]
+    return dict(names=names, short_names=short_names)
 
 def get_work_score(profile):
     try:
         employers = profile['work']
+        return 0
     except KeyError:
         return 0;
 

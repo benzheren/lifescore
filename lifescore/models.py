@@ -40,6 +40,13 @@ class NationalSchools(Base):
     city = Column(Unicode(255))
     short_name = Column(Unicode(255))
 
+    def __init__(self, rank=None, name=None, city=None, short_name=None):
+        self.rank = rank
+        self.name = name
+        self.city = city
+        self.short_name = short_name
+
+
 class WorldSchools(Base):
     __tablename__ = 'world_schools'
 
