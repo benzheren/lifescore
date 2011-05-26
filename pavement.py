@@ -60,6 +60,7 @@ options(
 
 @task
 def create_db_and_user():
+    """Create MySQL database user and database"""
     try:
         import MySQLdb
     except ImportError:
@@ -77,6 +78,7 @@ def create_db_and_user():
 @task
 @needs('create_db_and_user')
 def create_tables_from_sqlalchemy():
+    """Create tables from SQLAlchemy definition"""
     try:
         import MySQLdb
     except ImportError:
@@ -91,6 +93,7 @@ def create_tables_from_sqlalchemy():
 @task
 @needs('create_tables_from_sqlalchemy')
 def load_data_sets():
+    """Load data from CSV files into database"""
     try:
         import MySQLdb
     except ImportError:
