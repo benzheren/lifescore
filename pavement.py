@@ -53,7 +53,8 @@ options(
     DB=Bunch(
         host='localhost',
         user='root',
-        password=''
+        password='',
+        database='lifescore'
     ),
 )
 
@@ -72,4 +73,31 @@ def create_db_and_user():
         cursor.execute("""GRANT ALL PRIVILEGES ON lifescore.* to
                 'lifescore'@'localhost'""")
         cursor.execute("""SET PASSWORD FOR 'lifescore'@'localhost' = PASSWORD('5mad_cows')""")
+
+@task
+@needs('create_db_and_user')
+def create_tables_from_sqlalchemy():
+    try:
+        import MySQLdb
+    except ImportError:
+        print 'ERRORL please install MySQL-python lib first...'
+    else:
+        from lifescore import models
+        from sqlalchemy import create_engine
+        engine = create_engine("mysql+mysqldb://lifescore:5mad_cows@localhost/" + 
+                    "lifescore?charset=utf8&use_unicode=0")
+        models.initialize_sql(engine)
+
+@task
+@needs('create_tables_from_sqlalchemy')
+def load_data_sets():
+    try:
+        import MySQLdb
+    except ImportError:
+        print 'ERRORL please install MySQL-python lib first...'
+    else:
+        db = MySQLdb.connect(host=options.DB.host, user=options.DB.user,
+                passwd=options.DB.password, db=options.DB.database)
+        cursor = db.cursor()
+        pass 
 
