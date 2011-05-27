@@ -63,6 +63,54 @@ class WorldSchools(Base):
         self.short_name = short_name
 
 
+class Company(Base):
+    __tablename__ = 'companies'
+
+    id = Column(Integer, primary_key=True)
+    rank = Column(Integer)
+    name = Column(Unicode(255))
+    revenue = Column(Integer)
+    employees = Column(Integer)
+    location = Column(Unicode(255))
+    industry = Column(Unicode(255))
+
+    def __init__(self, rank=None, name=None, revenue=None, employees=None,
+            location=None, industry=None):
+        self.rank = rank
+        self.name = name
+        self.revenue = revenue
+        self.employees = employees
+        self.location = location
+        self.industry = industry
+
+
+class Major(Base):
+    __tablename__ = 'majors'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(Unicode(255))
+    avg_starting_salary = Column(Integer)
+    mid_career_salary = Column(Integer)
+
+    def __init__(self, name=None, avg_staring_salary=None,
+            mid_career_salary=None):
+        self.name = name
+        self.avg_starting_salary = avg_starting_salary
+        self.mid_career_salary = mid_career_salary
+
+
+class Job(Base):
+    __tablename__ = 'jobs'
+
+    id = Column(Integer, primary_key=True)
+    prestige = Column(Integer)
+    job = Column(Unicode(255))
+
+    def __init__(self, prestige, job):
+        self.prestige = prestige
+        self.job = job
+
+
 def initialize_sql(engine):
     DBSession.configure(bind=engine)
     Base.metadata.bind = engine
