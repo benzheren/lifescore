@@ -1,5 +1,31 @@
-body {
-	background:#ccc;	
+﻿body {
+	background:#ccc;
+	margin:50px;
+}
+
+h1,h2,h3,h4,h5 {
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin:0;
+	padding:0;
+}
+h1 {
+	font-size:6em;
+	font-weight:900;
+	font-family:'Covered By Your Grace', arial, serif;
+}
+
+h1.name {
+	margin:15px;
+}
+
+.score h2 {
+	font-size:5em;
+	font-weight:900;
+	font-family:'Carter One', 'Helvetica Neue Bold', Helvetica, Arial, sans-serif;
+	color:#fff;
+	text-shadow: 1px -1px 2px rgba(40, 40, 40, 0.5);
+	letter-spacing:-.06em;
+
 }
 
 .header {
@@ -21,43 +47,223 @@ ul.top-menu li a {
 	width: 100%;
 }
 
-.content {
-position: relative;
-width:950px;
-height: 150px;
-padding: 0;
-margin:0 auto;
-border: 1px solid #efefef;
-background: #fff;
+.pic-outer {
+	position: relative;
+	width:180px;
+	min-height: 200px;
+	padding: 20px;
+	border: 1px solid #efefef;
+	background: #fff;
+}
+
+.pic-outer:before,
+.pic-outer:after {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	left: 20px;
+	bottom:8px;
+	width: 70%;
+	max-width: 300px; /* avoid rotation causing ugly appearance at large container widths */
+	height: 55%;
+	-webkit-box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+	-webkit-transform: skew(-15deg) rotate(-2deg);
+	-moz-transform: skew(-15deg) rotate(-2deg);
+	-ms-transform: skew(-15deg) rotate(-2deg);
+	-o-transform: skew(-15deg) rotate(-2deg);
+	transform: skew(-15deg) rotate(-2deg);
+}
+
+
+.pic-outer:after {
+	left: auto;
+	right: 20px;
+	-webkit-transform: skew(15deg) rotate(2deg);
+	-moz-transform: skew(15deg) rotate(2deg);
+	-ms-transform: skew(15deg) rotate(2deg);
+	-o-transform: skew(15deg) rotate(2deg);
+	transform: skew(15deg) rotate(2deg);
+}	
+
+
+.pic-inner {
+	display:block;
+	padding:1px;
+	width:180px;
+	height:auto;
+	box-shadow:inset 0 0 3px  rgba(0,0,0,0.7);
+}
+
+.paper {
+	position: relative;
+	width: 480px;
+	height: 240px;
+	padding: 0px;
+	border: 1px solid #efefef;
+	background: #fff;
+	-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+
+}
+.paper:before,
+.paper:after {
+	background: #fefefe;
+	border: 1px solid #efefef;
+	width: 480px;
+	height: 240px;
+	content: '';
+	z-index: -1;
+	position: absolute;
+	-webkit-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.paper:before {
+	left: -10px;
+	bottom:0px;
+	-webkit-transform: skew(0deg) rotate(2deg);
+	-moz-transform: skew(0deg) rotate(2deg);
+	-ms-transform: skew(0deg) rotate(2deg);
+	-o-transform: skew(0deg) rotate(2deg);
+	transform: skew(0deg) rotate(2deg);
+}
+
+.paper:after {
+	left: -5px;
+	bottom:0px;
+	-webkit-transform: skew(0deg) rotate(-3deg);
+	-moz-transform: skew(0deg) rotate(-3deg);
+	-ms-transform: skew(0deg) rotate(-3deg);
+	-o-transform: skew(0deg) rotate(-3deg);
+	transform: skew(0deg) rotate(-3deg);
+}
+
+.score {
+
+	width:150px;
+	border-radius:150px;
+	text-align:center;
+	position:absolute;
+	top:0;
+	right:0;
+	
+	margin:-30px -75px 0 0;
+	*margin: -30px -75px 0 0   !important; /* IE 7 (IE6 also uses this, so put it first) */
+   _margin: -30px -75px 0 0    !important; /* IE 6 */
+    margin: -30px -75px 0 0\0/ !important; /* IE 8-9 */
+	
+	padding:30px 0px;
+	*padding: 10px  !important; /* IE 7	*/
+   _padding: 10px  !important; /* IE 6 */
+    padding: 10px\0/ !important; /* IE 8-9 */
+	
+	
+	/* Shadow */
+	-webkit-box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.3);
+	
+	/* Background */
+	background: #FF3300; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2222', endColorstr='#FF2E2E'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ff2222), to(#FF2E2E)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #ff2222,  #FF2E2E); /* for firefox 3.6+ */ 
+	
+	border:1px solid #cc2222;
+	
+	/* Rotation */
+	-webkit-transform: skew(0deg) rotate(15deg);
+	-moz-transform: skew(0deg) rotate(15deg);
+	-ms-transform: skew(0deg) rotate(15deg);
+	-o-transform: skew(0deg) rotate(15deg);
+	transform: skew(0deg) rotate(15deg);
+
+}
+.folders {
+	overflow:hidden;
+	margin:30px 0 0 0;
+}
+
+ul.tabs {
+	list-style:none;
+	display:block;
+	overflow:hidden;
+	font-size:1.4em;
+	font-weight:900;
+	padding:10px 0 0 20px;
+	margin:0;
+	border-bottom:1px solid #FDF0C2;
+	height:43px;
+	text-shadow: -1px 1px 1px rgba(255, 255, 255, 1);
+	
+	
+}
+
+
+ul.tabs li {
+	display:inline;
+	float:left;
+	background:rgba(253,240,194,1.0);
+	margin:2px 5px;
+	border-radius:4px 4px 0 0;
+	height:40px;
+	border-bottom: 1px solid #ccc;
+	
+	/* Shadow */
+	-webkit-box-shadow: 0px -1px 5px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow: 0px  -1px 5px rgba(50, 50, 50, 0.3);
+	box-shadow: 0px  -1px 5px rgba(50, 50, 50, 0.3);
+}
+
+
+ul.tabs li.active {
+	height:40px;
+	border-bottom: 1px solid #FDF0C2;
+
+}
+
+ul.tabs li.active:hover {
+	top:0px;
+	height:43px;
+
+}
+
+ul.tabs li:hover {
+	position: relative;
+	top:-3px;
+	height:43px;
 
 }
 
 
-.content:before,
-.content:after {
-content: '';
-z-index: -1;
-position: absolute;
-left: 20px;
-bottom:20px;
-width: 70%;
-max-width: 800px; /* avoid rotation causing ugly appearance at large container widths */
-height: 55%;
--webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
--moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
--webkit-transform: skew(-15deg) rotate(-2deg);
--moz-transform: skew(-15deg) rotate(-2deg);
--ms-transform: skew(-15deg) rotate(-2deg);
--o-transform: skew(-15deg) rotate(-2deg);
-transform: skew(-15deg) rotate(-2deg); }
+ul.tabs li a {
+	display:block;
+	padding:10px 20px 5px 20px;
+	min-width:100px;
+	text-align:center;
+	text-decoration:none;
+	color:#000;
+}	
+
+ul.tabs li a:hover {
+	text-decoration:none;
+	color:#000;	
+}
 
 
-.content:after {
-left: auto;
-right: 20px;
--webkit-transform: skew(15deg) rotate(2deg);
--moz-transform: skew(15deg) rotate(2deg);
--ms-transform: skew(15deg) rotate(2deg);
--o-transform: skew(15deg) rotate(2deg);
-transform: skew(15deg) rotate(2deg); }	
+.contents {
+	margin:-1px 0 0 0;
+	background:rgba(253,240,194,1.0);
+	min-height:300px;
+	/* Shadow */
+	-webkit-box-shadow: 1px 1px 7px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow: 1px  1px 7px rgba(50, 50, 50, 0.3);
+	box-shadow: 1px  1px 7px rgba(50, 50, 50, 0.3);
+
+}
+
+	
