@@ -4,9 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Untitled Document</title>
 <link href="../../static/css/blueprint-reset.css" rel="stylesheet" media="screen" />
-<link href="../../static/css/score.css" rel="stylesheet" media="screen" />
+<link href="score.css" rel="stylesheet" media="screen" />
 <link href='http://fonts.googleapis.com/css?family=Carter+One' rel='stylesheet' type='text/css' />
 <link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis+Light' rel='stylesheet' type='text/css' />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.plugins.js"></script>
+
+<script type="text/javascript" src="score.js"></script>
 
 </head>
 
@@ -14,43 +22,67 @@
 
 <div class="wrapper container">
 	
-	<div class="left span-6">
+	<div class="left span-3">
 		<div class="pic-outer">
 			<div class="pic-inner">
-				<img class="pic" src="http://profile.ak.fbcdn.net/hprofile-ak-snc4/187086_10123538_344705_n.jpg" />
+				<img class="pic" src="http://profile.ak.fbcdn.net/hprofile-ak-snc4/174503_10037093_2768946_n.jpg" />
 			</div>
 		</div>
 	</div>
 	
-	<div class="right span-17">
+	<div class="right span-17 prepend-1">
 		<div class="paper">
 			<h1 class="name">Alexander Timothy</h1>
 			<div class="score"><h2>750</h2></div>
 		</div>
 		
+	</div>
+	
+	<div class="main span-17 prepend-3">
 		<div class="folders">
 			<ul class="tabs">
-				<li class="active"><a href="">Head 2 Head</a></li>
-				<li><a href="">Your Friends</a></li>
+				<li><a href="">Head 2 Head</a></li>
+				<li class="active"><a href="">Your Friends</a></li>
 				<li><a href="">World Wide Scores</a></li>
+
 			</ul>
 			<div class="contents">
-				<ul class="leaderboard" id="frlb-head">
-					<li class="lb-rank">Rank</li>
-					<li class="lb-name">Name</li>
-					<li class="lb-score">Score</li>
-				</ul>
-				<ul class="leaderboard" id="frlb-body">
-					<li class="lb-rank">Rank</li>
-					<li class="lb-name">Name</li>
-					<li class="lb-score">Score</li>
-				</ul>
+				<ul class="leaderboard" id="leaderboard">
+					<li id="id-1" class="row" value="500">
+						<ul class="lb-row">
+							<li class="lb-rank">#1</li>
+							<li class="lb-name">Ben Hu</li>
+							<li class="lb-score">500</li>
+						</ul>
+					</li>
+					<li id="id-2" class="row" value="200">
+						<ul class="lb-row">
+							<li class="lb-rank">#4</li>
+							<li class="lb-name">Bary LastName</li>
+							<li class="lb-score">200</li>
+						</ul>
+					</li>
+					<li id="id-3" class="row" value="340">
+						<ul class="lb-row">
+							<li class="lb-rank">#2</li>
+							<li class="lb-name">John LastName</li>
+							<li class="lb-score">340</li>
+						</ul>
+					</li>
+					<li id="id-4" class="row" value="300">
+						<ul class="lb-row">
+							<li class="lb-rank">#3</li>
+							<li class="lb-name">Jennifer LastName</li>
+							<li class="lb-score">300</li>
+						</ul>
+					</li>
+					
 
+				</ul>
 			
+			</div>	
 			</div>
-		
-		</div>
-		
+	
 	</div>
 
 
