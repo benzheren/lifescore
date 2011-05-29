@@ -11,4 +11,4 @@ MySQL-python
 -e git+https://github.com/facebook/python-sdk.git@master#egg=lifescore
 Beaker
 pyramid_beaker
-
+Celery

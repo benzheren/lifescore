@@ -18,6 +18,7 @@ requires = [
     'python-memcached',
     'Beaker',
     'pyramid_beaker',
+    'Celery'
     ]
 
 if sys.version_info[:3] < (2,5,0):

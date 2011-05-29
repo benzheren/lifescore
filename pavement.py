@@ -1,5 +1,6 @@
 import os
 import sys
+from subprocess import call
 
 from paver.easy import *
 import paver.doctools
@@ -60,6 +61,7 @@ options(
 
 @task
 def create_db_and_user():
+    """Create MySQL database user and database"""
     try:
         import MySQLdb
     except ImportError:
@@ -77,6 +79,7 @@ def create_db_and_user():
 @task
 @needs('create_db_and_user')
 def create_tables_from_sqlalchemy():
+    """Create tables from SQLAlchemy definition"""
     try:
         import MySQLdb
     except ImportError:
@@ -91,13 +94,57 @@ def create_tables_from_sqlalchemy():
 @task
 @needs('create_tables_from_sqlalchemy')
 def load_data_sets():
-    try:
-        import MySQLdb
-    except ImportError:
-        print 'ERRORL please install MySQL-python lib first...'
-    else:
-        db = MySQLdb.connect(host=options.DB.host, user=options.DB.user,
-                passwd=options.DB.password, db=options.DB.database)
-        cursor = db.cursor()
-        pass 
+    """Load data from CSV files into database. RUN ONLY ONCE!!!"""
+    _load_csv_file('jobs', 'top-jobs-ranked.csv', 'Data/Jobs/', 'prestige,job')
 
+    _load_csv_file('companies', 'worlds-largest-public-private.csv',
+                   'Data/Companies/',
+                   'rank,name,revenue,employees,industry,location')
+
+    _load_csv_file('companies', 'forbes-usa-500-private.csv', 'Data/Companies/',
+                  'rank,name,revenue,employees,location,industry')
+
+    _load_csv_file('companies', 'forbes-global-500-public.csv',
+                   'Data/Companies/', 'rank,name,revenue')
+
+    _load_national_school_csv_file('national_schools', None, 'Data/Schools/',
+                    'rank,name,city,short_name')
+
+    _load_csv_file('world_schools', None, 'Data/Schools/',
+                    'rank,name,country,short_name')
+
+def _load_csv_file(table, file, folder, columns):
+    mysql_import_cmd = "mysqlimport -u root --fields-terminated-by=',' \
+--fields-optionally-enclosed-by='\"' --lines-terminated-by='\\r\\n' --verbose \
+--columns=%s --local lifescore %s"
+
+    print "Try to load %s..." % file
+    print " => Create temp csv file and import data to mysql..."
+    if not file:
+        retcode = call(mysql_import_cmd % (columns, folder + table
+                                              + '.csv'), shell=True)
+    else:
+        retcode = call("ln -s %s %s%s.csv" % (file, folder, table) +
+                  " && " + mysql_import_cmd % (columns, folder + table
+                                              + '.csv'), shell=True)
+        if not retcode:
+            print ' => Delete temp csv file'
+            call("rm %s%s.csv" % (folder, table), shell=True)
+
+def _load_national_school_csv_file(table, file, folder, columns):
+    mysql_import_cmd = "mysqlimport -u root --fields-terminated-by=',' \
+--fields-optionally-enclosed-by='\"' --lines-terminated-by='\\n' --verbose \
+--columns=%s --local lifescore %s"
+
+    print "Try to load %s..." % file
+    print " => Create temp csv file and import data to mysql..."
+    if not file:
+        retcode = call(mysql_import_cmd % (columns, folder + table
+                                              + '.csv'), shell=True)
+    else:
+        retcode = call("ln -s %s %s%s.csv" % (file, folder, table) +
+                  " && " + mysql_import_cmd % (columns, folder + table
+                                              + '.csv'), shell=True)
+        if not retcode:
+            print ' => Delete temp csv file'
+            call("rm %s%s.csv" % (folder, table), shell=True)
