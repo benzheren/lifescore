@@ -1,4 +1,6 @@
+import json
 import unittest
+
 from pyramid.config import Configurator
 from pyramid import testing
 
@@ -65,10 +67,18 @@ class UnitTests(unittest.TestCase):
                 Technology", "United States","MIT"))
         self.session.flush()
 
+    def test_get_relationship(self):
+        from lifescore import views
+        profile = json.loads('{"relationship_status": "Married"}')
+        self.assertEqual(views._get_relationship_score(profile), 1.3)
+        profile = json.loads('{}')
+        self.assertEqual(views._get_relationship_score(profile), 1)
+
+
     def test_get_national_schools(self):
         from lifescore import views
         self._addSchools()
-        schools = views.get_all_national_schools()
+        schools = views._get_all_national_schools()
         self.assertEqual(len(schools['names']), 8)
         self.assertEqual(schools['names'][0], unicode('Harvard University'))
         self.assertEqual(schools['short_names'][5], unicode('UPenn'))
@@ -76,7 +86,7 @@ class UnitTests(unittest.TestCase):
     def test_get_world_schools(self):
         from lifescore import views
         self._addSchools()
-        schools = views.get_all_world_schools()
+        schools = views._get_all_world_schools()
         self.assertEqual(len(schools['names']), 5)
         self.assertEqual(schools['names'][0], u'University of Cambridge')
         self.assertEqual(schools['short_names'][4], u'MIT')
@@ -84,8 +94,20 @@ class UnitTests(unittest.TestCase):
     def test_get_school_rank(self):
         from lifescore import views
         self._addSchools()
-        self.assertEqual(views.get_school_rank('Harvard University'), 500)
-        self.assertEqual(views.get_school_rank('UPenn'), 495)
-        self.assertEqual(views.get_school_rank('Columbia University'), 497)
-        self.assertEqual(views.get_school_rank('MIT'), 496)
-        self.assertEqual(views.get_school_rank('Random school name'), 0)
+        self.assertEqual(views._get_school_rank('Harvard University'), 500)
+        self.assertEqual(views._get_school_rank('UPenn'), 495)
+        self.assertEqual(views._get_school_rank('Columbia University'), 497)
+        self.assertEqual(views._get_school_rank('MIT'), 496)
+        self.assertEqual(views._get_school_rank('Random school name'), 0)
+
+    def test_get_education_score(self):
+        from lifescore import views
+        self._addSchools()
+        profile = json.loads('{"education":\
+                             [{"school": {"name": "MIT"}, "type": "College"},\
+                             {"school": {"name": "Harvard University"}, \
+                             "type": "Graduate School"}]}')
+        self.assertEqual(views._get_education_score(profile), 1246)
+        profile = json.loads('{}')
+        self.assertEqual(views._get_education_score(profile), 0)
+
