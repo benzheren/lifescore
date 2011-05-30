@@ -60,8 +60,16 @@ options(
 )
 
 @task
+@needs(['create_db_and_user', 'create_tables_from_sqlalchemy', 'load_data_sets'])
+def bootstrap():
+    """This creates database user, database, tables from sqlalchemy definition
+    and load CSV data into database"""
+    print 'Bootstrap is done...'
+
+@task
 def create_db_and_user():
-    """Create MySQL database user and database"""
+    """Create MySQL database user and database. This drops the existing
+    lifescore database, use with care"""
     try:
         import MySQLdb
     except ImportError:
@@ -70,6 +78,7 @@ def create_db_and_user():
         db = MySQLdb.connect(host=options.DB.host, user=options.DB.user,
                 passwd=options.DB.password, db='')
         cursor = db.cursor()
+        cursor.execute("""DROP DATABASE IF EXISTS lifescore""")
         cursor.execute("""CREATE DATABASE IF NOT EXISTS lifescore DEFAULT CHARACTER SET
                 'utf8' DEFAULT COLLATE 'utf8_bin'""")
         cursor.execute("""GRANT ALL PRIVILEGES ON lifescore.* to
