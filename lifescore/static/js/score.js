@@ -2,10 +2,14 @@ $(function() {
 	console.log('yes');
 	
 	$("a[href='friends']").click(function() {
-	alert('yes');
-		 $('#leaderboard > li').tsort({attr:"value"});  
+	
+		 $('#leaderboard2>li').tsort({attr:"value"});  
+		alert('yes');
+
 	 	return false;
 	});
 
 	
 });
+
+
