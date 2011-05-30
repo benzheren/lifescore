@@ -6,6 +6,7 @@ import memcache
 from pyramid.view import view_config
 from pyramid.url import route_url
 
+from lifescore import tasks
 from lifescore.models import User, NationalSchools, WorldSchools, Company
 from lifescore.models import DBSession
 
@@ -80,8 +81,10 @@ def fetch_friends(request):
     user = _get_user_from_fb_id(request.GET['fb_id'])
     graph = _get_graph(user.fb_access_token)
     friends = graph.get_objects(friends_id.split(','))
-    return [dict(id=f['id'], score=_get_lifescore(f)) for f in
-            friends.itervalues()]
+    scores = [dict(id=f['id'], score=_get_lifescore(f)) for f in 
+              friends.itervalues()]
+    tasks.save_friends.delay(friends.values(), scores, user)
+    return scores
 
 @cache_region('short_term', 'graph')
 def _get_graph(access_token):
