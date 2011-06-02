@@ -1,6 +1,7 @@
 ﻿body {
 	background:#ccc;
 	margin:50px;
+		background: url('../../static/images/bg/sedona.jpg');
 }
 
 h1,h2,h3,h4,h5 {
@@ -11,19 +12,20 @@ h1,h2,h3,h4,h5 {
 h1 {
 	font-size:6em;
 	font-weight:900;
-	font-family:'Covered By Your Grace', arial, serif;
+	font-family: 'Sue Ellen Francisco', arial, serif;
 }
 
 h1.name {
-	margin:15px;
+	margin:15% auto;
+	text-align:center;
 }
 
 .score h2 {
 	font-size:5em;
 	font-weight:900;
-	font-family:'Carter One', 'Helvetica Neue Bold', Helvetica, Arial, sans-serif;
+	font-family: 'Terminal Dosis Light', arial, serif;
 	color:#fff;
-	text-shadow: 1px -1px 2px rgba(40, 40, 40, 0.5);
+	text-shadow: 1px -1px 1px rgba(255, 255, 40, 0.5);
 	letter-spacing:-.06em;
 
 }
@@ -51,7 +53,7 @@ ul.top-menu li a {
 	position: relative;
 	width:180px;
 	min-height: 200px;
-	padding: 20px;
+	padding: 20px 20px 50px 20px;
 	border: 1px solid #efefef;
 	background: #fff;
 }
@@ -65,6 +67,7 @@ ul.top-menu li a {
 	bottom:8px;
 	width: 70%;
 	max-width: 300px; /* avoid rotation causing ugly appearance at large container widths */
+	max-height:300px;
 	height: 55%;
 	-webkit-box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
@@ -144,8 +147,8 @@ ul.top-menu li a {
 
 .score {
 
-	width:150px;
-	border-radius:150px;
+	width:120px;
+	border-radius:120px;
 	text-align:center;
 	position:absolute;
 	top:0;
@@ -156,7 +159,7 @@ ul.top-menu li a {
    _margin: -30px -75px 0 0    !important; /* IE 6 */
     margin: -30px -75px 0 0\0/ !important; /* IE 8-9 */
 
-	padding:30px 0px;
+	padding:15px 0px;
 	*padding: 10px  !important; /* IE 7	*/
    _padding: 10px  !important; /* IE 6 */
     padding: 10px\0/ !important; /* IE 8-9 */
@@ -173,7 +176,7 @@ ul.top-menu li a {
 	background: -webkit-gradient(linear, left top, left bottom, from(#ff2222), to(#FF2E2E)); /* for webkit browsers */
 	background: -moz-linear-gradient(top,  #ff2222,  #FF2E2E); /* for firefox 3.6+ */ 
 
-	border:1px solid #cc2222;
+	border:1px double #cc2222;
 
 	/* Rotation */
 	-webkit-transform: skew(0deg) rotate(15deg);
@@ -192,14 +195,10 @@ ul.tabs {
 	list-style:none;
 	display:block;
 	overflow:hidden;
-	font-size:1.4em;
-	font-weight:900;
-	padding:10px 0 0 20px;
+	font-size:1.5em;
+	padding:10px 0 0 50px;
 	margin:0;
-	border-bottom:1px solid #FDF0C2;
 	height:43px;
-	text-shadow: -1px 1px 1px rgba(255, 255, 255, 1);
-
 
 }
 
@@ -207,22 +206,24 @@ ul.tabs {
 ul.tabs li {
 	display:inline;
 	float:left;
-	background:rgba(253,240,194,1.0);
+	background:rgba(240,215,180,1.0);;
 	margin:2px 5px;
 	border-radius:4px 4px 0 0;
 	height:40px;
-	border-bottom: 1px solid #ccc;
 
 	/* Shadow */
 	-webkit-box-shadow: 0px -1px 5px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow: 0px  -1px 5px rgba(50, 50, 50, 0.3);
 	box-shadow: 0px  -1px 5px rgba(50, 50, 50, 0.3);
 }
-
+	
 
 ul.tabs li.active {
 	height:40px;
 	border-bottom: 1px solid #FDF0C2;
+	margin:2px 5px;
+	z-index:200;
+	background:rgba(253,240,194,1.0);
 
 }
 
@@ -246,48 +247,100 @@ ul.tabs li a {
 	min-width:100px;
 	text-align:center;
 	text-decoration:none;
-	color:#000;
+	color:#663300;
+	text-shadow: -1px 2px 1px rgba(255, 255, 255, .8);
 }	
 
 ul.tabs li a:hover {
 	text-decoration:none;
-	color:#000;	
+	color:#663300;
 }
 
 
 .contents {
 	margin:-1px 0 0 0;
 	background:rgba(253,240,194,1.0);
-	min-height:300px;
-	/* Shadow */
-	-webkit-box-shadow: 1px 1px 7px rgba(50, 50, 50, 0.3);
-	-moz-box-shadow: 1px  1px 7px rgba(50, 50, 50, 0.3);
-	box-shadow: 1px  1px 7px rgba(50, 50, 50, 0.3);
-
+	-moz-box-shadow: 1px  5px 7px rgba(50, 50, 50, 0.6);
+	box-shadow: 1px  5px 7px rgba(50, 50, 50, 0.6);
+	overflow:hidden;
+	border-radius:10px 10px 3px 3px;
 }
+
+
+
+ul.leaderboard {
+	margin:1.5em 0 1.5em 1.5em;
+	padding:0;
+}
+
 
 ul.leaderboard, ul.lb-row {
 	list-style:none;
 	display:block;
 	overflow:hidden;
 	font-size:1.4em;
-	font-weight:900;
-	position:relative;
-	width:600px;
+	width:620px;
+	font-family: 'Sue Ellen Francisco', arial, serif;
+	padding:0;
 }
 
-ul.leaderboard li {
+
+ul.leaderboard li.row {
 	float:left;
 	clear:both;
-	width: 100%;
+	width: 600px;
 	border-bottom:1px dashed #666;
+	background:rgba(253,240,194,1.0);
+	padding:5px 0;
 
 }
 
 ul.lb-row li {
 	float:left;
-	clear:none;
-	border:none;
+
+}
+ul.lb-row li.lb-rank, ul.lb-row li.lb-score  {
+	font-family: 'Terminal Dosis Light', arial, serif;
+
+}
+
+ul.lb-row li.lb-rank  {
+	width:60px;
+	color: rgba(55, 55, 55, 0.5);
 	
 }
 
+ul.lb-row li.lb-name  {
+	font-family: 'Sue Ellen Francisco', arial, serif;
+	min-width:300px;
+	font-weight:600;
+	letter-spacing:.08em;
+	text-transform:uppercase;
+	font-size:.8em;
+	margin-top:.3em;
+}
+
+
+ul.lb-row li.lb-score {
+	float:right;
+	color:#FF3300;
+	text-shadow: 1px -1px 2px rgba(40, 40, 40, 0.1);
+	letter-spacing:-.06em;
+	margin-right:10px;
+
+}
+
+.lines {
+	content:'';
+	display:block;
+	width:100%;
+	border-top:1px inset rgba(253,240,194,0.1);
+	border-bottom:2px inset rgba(255,255,255,0.3);
+	margin:10px 0;
+}
+
+.clear {
+	content:'';
+	clear:both;
+	height:10px;	
+}
