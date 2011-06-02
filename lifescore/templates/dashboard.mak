@@ -1,5 +1,5 @@
 <%inherit file="base.mak"/>
-${fb_id}
+${profile['id']}
 <div id="rank"></div>
 % if friends_id:
 	<script type="text/javascript">
@@ -18,7 +18,7 @@ ${fb_id}
 		function fetch_friends(ids) {
 			$.ajax({
 			url: '/fetch_friends',
-			data: {friends_id: ids.toString(), fb_id: '${fb_id}'},
+			data: {friends_id: ids.toString(), fb_id: '${profile['id']}'},
 			dataType: 'json',
 			success: fetch_friends_callback
 			});	

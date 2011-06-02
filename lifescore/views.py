@@ -59,7 +59,7 @@ def dashboard(request):
                        _get_lifescore(profile), )
             dbsession.add(user)
             dbsession.commit()
-            return dict(fb_id=fb_id,
+            return dict(profile=profile,
                         friends_id=_get_friends_id(graph).encode('ascii', 'ignore'))
         elif user.fb_access_token != cookie['access_token']:
             user.fb_access_token = cookie['access_token']
