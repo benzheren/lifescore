@@ -67,6 +67,9 @@ def dashboard(request):
                 user.score = _get_lifescore(profile)
             dbsession.merge(user)
             dbsession.commit()
+
+        return dict(profile=profile,
+                        friends_id=_get_friends_id(graph).encode('ascii', 'ignore'))
             #fecth existing data from db and return the dashboard
     else:
         # need redirect to a 404 error page
