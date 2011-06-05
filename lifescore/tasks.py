@@ -20,7 +20,3 @@ def save_friends(friends, scores, user):
         dbsession.add(friend)
 
     dbsession.commit()
-
-@task
-def add(x, y):
-    return x + y
