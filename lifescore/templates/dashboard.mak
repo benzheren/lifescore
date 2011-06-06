@@ -15,9 +15,15 @@
 		
 		<div class="paper">
 			<h1 class="name">${profile['name']}</h1>
-			<h3 class="subs">${profile['location']['name']}</h3>
-			<h3 class="subs">school: ${profile['education'][1]['school']['name']}</h3>
-			<h3 class="subs">work: ${profile['work'][0]['employer']['name']}</h3>
+			% if 'location' in profile:
+				<h3 class="subs">${profile['location']['name']}</h3>
+			% endif
+			% if 'education' in profile:
+				<h3 class="subs">school: ${profile['education'][1]['school']['name']}</h3>
+			% endif
+			% if 'work' in profile:
+				<h3 class="subs">work: ${profile['work'][0]['employer']['name']}</h3>
+			% endif
 			
 			<div class="your-score">your score</div>
 			

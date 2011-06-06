@@ -20,3 +20,6 @@ BROKER_PASSWORD = "guest"
 CELERYD_CONCURRENCY = 10
 # CELERYD_LOG_FILE = "celeryd.log"
 # CELERYD_LOG_LEVEL = "INFO"
+
+# Custom Settings for App
+CELERY_RESULT_DBURI = "mysql+mysqldb://lifescore:5mad_cows@localhost/lifescore?charset=utf8&use_unicode=0"

@@ -1,9 +1,11 @@
 from celery.task import task
+from celery.loaders.default import Loader
 from sqlalchemy import create_engine
 
 from lifescore.models import DBSession, Base, Friend
 
-engine = create_engine('mysql+mysqldb://lifescore:5mad_cows@localhost/lifescore?charset=utf8&use_unicode=0')
+loader = Loader()
+engine = create_engine(loader.read_configuration()['CELERY_RESULT_DBURI'])
 dbsession = DBSession()
 dbsession.configure(bind=engine)
 Base.metadata.bind = engine
@@ -18,7 +20,3 @@ def save_friends(friends, scores, user):
         dbsession.add(friend)
 
     dbsession.commit()
-
-@task
-def add(x, y):
-    return x + y
