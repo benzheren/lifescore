@@ -55,8 +55,11 @@ def dashboard(request):
         fb_id = profile['id']
         user = dbsession.query(User).filter(User.fb_id==fb_id).first()
         if not user:
-            user = User(fb_id, cookie['access_token'], profile['updated_time'],
-                       _get_lifescore(profile), )
+            user = User(fb_id, cookie['access_token'], profile['updated_time'], 
+                       profile['name'], 'gender' in profile and
+                        profile['gender'] or None, 'location' in profile and
+                        profile['location']['name'] or None, 
+                        _get_lifescore(profile))
             dbsession.add(user)
             dbsession.commit()
             return dict(profile=profile,
@@ -84,8 +87,8 @@ def fetch_friends(request):
     user = _get_user_from_fb_id(request.GET['fb_id'])
     graph = _get_graph(user.fb_access_token)
     friends = graph.get_objects(friends_id.split(','))
-    scores = [dict(id=f['id'], score=_get_lifescore(f)) for f in 
-              friends.itervalues()]
+    scores = [dict(id=f['id'], name=f['name'], score=_get_lifescore(f)) 
+              for f in friends.itervalues()]
     tasks.save_friends.delay(friends.values(), scores, user)
     try:
         top_friends = request.session['top_friends']
@@ -120,8 +123,8 @@ def _get_lifescore_influenced(graph):
     return score
 
 def _get_lifescore(profile):
-    #score = (_get_education_score(profile) + _get_work_score(profile)) * \
-    #        _get_relationship_score(profile) * _get_family_score(profile)
+    score = (_get_education_score(profile) + _get_work_score(profile)) * \
+            _get_relationship_score(profile) * _get_family_score(profile)
     #location = profile['location']
     #gender = profile['gender']
     return random.randint(400, 850)

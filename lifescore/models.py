@@ -17,17 +17,19 @@ class User(Base):
     fb_id = Column(String(255), unique=True)
     fb_access_token = Column(String(255))
     fb_updated_time = Column(TIMESTAMP)
+    name = Column(Unicode(255))
     gender = Column(Unicode(255))
     location = Column(Unicode(255))
     score = Column(Integer)
     created = Column(TIMESTAMP, default=func.current_timestamp())
     friends = relationship('Friend', backref='user')
 
-    def __init__(self, fb_id=None, fb_access_token=None, fb_updated_time=None,
-                 gender=None, location=None, score=0):
+    def __init__(self, fb_id=None, fb_access_token=None, fb_updated_time=None, 
+                 name=None, gender=None, location=None, score=0):
         self.fb_id = fb_id
         self.fb_access_token = fb_access_token
         self.fb_updated_time = fb_updated_time
+        self.name = name
         self.gender = gender
         self.location = location
         self.score = score
@@ -38,14 +40,16 @@ class Friend(Base):
 
     id = Column(Integer, primary_key=True)
     fb_id = Column(String(255), unique=True)
+    name = Column(Unicode(255))
     gender = Column(Unicode(255))
     location = Column(Unicode(255))
     score = Column(Integer)
     created = Column(TIMESTAMP, default=func.current_timestamp())
     user_id = Column(Integer, ForeignKey('users.id'))
 
-    def __init__(self, fb_id, gender=None, location=None, score=0):
+    def __init__(self, fb_id, name=None, gender=None, location=None, score=0):
         self.fb_id = fb_id
+        self.name = name
         self.gender = gender
         self.location = location
         self.score = score

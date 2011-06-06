@@ -13,9 +13,11 @@ Base.metadata.bind = engine
 @task
 def save_friends(friends, scores, user):
     for i in range(len(friends)):
-        friend = Friend(friends[i]['id'], 'gender' in friends[i] and
-                        friends[i]['gender'] or None, 'location' in friends[i]
-                        and friends[i]['location']['name'] or None, scores[i]['score'])
+        friend = Friend(friends[i]['id'], friends[i]['name'], 
+                        'gender' in friends[i] and friends[i]['gender'] or None, 
+                        'location' in friends[i] and 
+                        friends[i]['location']['name'] or None, 
+                        scores[i]['score'])
         friend.user_id = user.id
         dbsession.add(friend)
 
