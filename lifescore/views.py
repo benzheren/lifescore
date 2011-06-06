@@ -87,7 +87,17 @@ def fetch_friends(request):
     scores = [dict(id=f['id'], score=_get_lifescore(f)) for f in 
               friends.itervalues()]
     tasks.save_friends.delay(friends.values(), scores, user)
-    return scores
+    try:
+        top_friends = request.session['top_friends']
+        top_friends.extend(scores)
+        top_friends = sorted(top_friends, key=lambda k: k['score'], 
+                             reverse=True)[0:20]
+        request.session['top_friends'] = top_friends
+        return top_friends
+    except KeyError:
+        request.session['top_friends'] = scores
+        return scores
+
 
 @cache_region('short_term', 'graph')
 def _get_graph(access_token):
@@ -110,8 +120,8 @@ def _get_lifescore_influenced(graph):
     return score
 
 def _get_lifescore(profile):
-    score = (_get_education_score(profile) + _get_work_score(profile)) * \
-            _get_relationship_score(profile) * _get_family_score(profile)
+    #score = (_get_education_score(profile) + _get_work_score(profile)) * \
+    #        _get_relationship_score(profile) * _get_family_score(profile)
     #location = profile['location']
     #gender = profile['gender']
     return random.randint(400, 850)
