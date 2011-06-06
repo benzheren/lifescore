@@ -47,7 +47,7 @@ function fetch_friends_callback(data) {
 			var friend = '<li id="'+value.id+'" class="row" value="'+value.score+'">'
 						+  	'<ul class="lb-row">'
 						+  	'<li class="lb-rank"><img class="smallpic" src="http://graph.facebook.com/'+value.id+'/picture?type=square" /></li>'
-						+	'<li class="lb-name">'+value.id+'</li>'
+						+	'<li class="lb-name">'+value.name+'</li>'
 						+	'<li class="lb-score">'+value.score+'</li>'
 						+	'</ul></li>';	
 			topfriends += friend;
