@@ -324,7 +324,11 @@ ul.tabs li a:hover {
 	overflow:hidden;
 	border-radius:10px 10px 3px 3px;
 	width:100%;
-	
+	display:none;
+}
+
+.contents.active {
+	display:block;
 }
 
 

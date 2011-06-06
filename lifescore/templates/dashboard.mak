@@ -41,8 +41,7 @@
 				<li><a href="">World Wide Scores</a></li>
 
 			</ul>
-			<div class="contents">
-				
+			<div class="contents friends active">
 				<ul class="leaderboard" id="leaderboard">
 				</ul>
 				<div class="leaderboard">
@@ -52,7 +51,25 @@
 				
                 <div class="lines"></div><div class="lines"></div>
                 <div class="clear"></div>
-			</div>	
+			</div>
+			<div class="contents world">
+				<ul class="leaderboard" id="leaderboard">
+				</ul>
+				<div class="leaderboard">
+					<div class="more"><a href="more">show more</a></div>
+				</div>
+                <div class="lines"></div><div class="lines"></div>
+                <div class="clear"></div>
+			</div>
+			<div class="contents world">
+				<ul class="leaderboard" id="leaderboard">
+				</ul>
+				<div class="leaderboard">
+					<div class="more"><a href="more">show more</a></div>
+				</div>
+                <div class="lines"></div><div class="lines"></div>
+                <div class="clear"></div>
+			</div>
 		</div>
 		
 	</div>

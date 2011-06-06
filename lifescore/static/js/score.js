@@ -7,7 +7,7 @@ $(function() {
 	
 	$('.more a').click(function(e) {
 		
-		if(($leaderboard.children().size()*50) > lbheight) {
+		if(($leaderboard.children().size()*50	) > lbheight) {
 			lbheight += 500;
 			$leaderboard.animate({height: lbheight}, 800 );
 		} else {
