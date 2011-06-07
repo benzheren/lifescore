@@ -67,6 +67,18 @@ class UnitTests(unittest.TestCase):
                 Technology", "United States","MIT"))
         self.session.flush()
 
+    def _addUsersAndFriends(self):
+        from lifescore.models import User, Friend
+        user_1 = User(1, None, None, 'user_1', None, None, 850)
+        user_2 = User(2, None, None, 'user_2', None, None, 840)
+        friends_1 = [Friend(i, 'name_%d' % i) for i in range(2, 32)]
+        friends_2 = [Friend(i, 'name_%d' % i) for i in range(32, 51)]
+        user_1.friends = friends_1
+        user_2.friends = friends_2
+        self.session.add(user_1)
+        self.session.add(user_2)
+        self.session.flush()
+
     def test_get_relationship(self):
         from lifescore import views
         profile = json.loads('{"relationship_status": "Married"}')
@@ -110,4 +122,39 @@ class UnitTests(unittest.TestCase):
         self.assertEqual(views._get_education_score(profile), 1246)
         profile = json.loads('{}')
         self.assertEqual(views._get_education_score(profile), 0)
+
+    def test_world_rank_fetch(self):
+        from lifescore import views
+        self._addUsersAndFriends()
+        request = testing.DummyRequest()
+        world_rank = views.world_rank_fetch(request)
+        self.assertEquals(len(world_rank), 20)
+        self.assertEquals(world_rank[0].id, 1)
+        request = testing.DummyRequest(params={'start' : 40})
+        world_rank = views.world_rank_fetch(request)
+        self.assertEqual(len(world_rank), 11)
+
+    def test_friends_rank_fetch(self):
+        from lifescore import views
+        self._addUsersAndFriends()
+        
+        request = testing.DummyRequest(params={'fb_id' : 1})
+        friends_rank = views.friends_rank_fetch(request)
+        self.assertEqual(len(friends_rank), 20)
+        
+        request = testing.DummyRequest(params={'fb_id' : 1, 'start' : 20})
+        friends_rank = views.friends_rank_fetch(request)
+        self.assertEqual(len(friends_rank), 10)
+        
+        request = testing.DummyRequest(params={'fb_id' : 1, 'start' : 40})
+        friends_rank = views.friends_rank_fetch(request)
+        self.assertEqual(len(friends_rank), 0)
+
+        request = testing.DummyRequest(params={'fb_id' : 2})
+        friends_rank = views.friends_rank_fetch(request)
+        self.assertEqual(len(friends_rank), 19)
+        
+ 
+
+
 

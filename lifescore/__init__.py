@@ -19,6 +19,8 @@ def main(global_config, **settings):
     config.add_route('home', '/')
     config.add_route('dashboard', '/profile/{fb_id}')
     config.add_route('fetch_friends', '/fetch_friends')
+    config.add_route('friends_rank_fetch', '/friends_rank_fetch')
+    config.add_route('world_rank_fetch', '/world_rank_fetch')
     return config.make_wsgi_app()
 
 

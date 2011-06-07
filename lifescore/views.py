@@ -5,9 +5,11 @@ import facebook
 import memcache
 from pyramid.view import view_config
 from pyramid.url import route_url
+from sqlalchemy.sql.expression import desc
 
 from lifescore import tasks
 from lifescore.models import User, NationalSchools, WorldSchools, Company
+from lifescore.models import Friend
 from lifescore.models import DBSession
 
 
@@ -101,6 +103,21 @@ def fetch_friends(request):
         request.session['top_friends'] = scores
         return scores
 
+@view_config(route_name='friends_rank_fetch', renderer='json')
+def friends_rank_fetch(request):
+    try:
+        friends_rank = request.session['friends_rank']
+    except KeyError:
+        user = _get_user_from_fb_id(request.GET['fb_id'])
+        friends_rank = _get_friends(user)
+        request.session['friends_rank'] = friends_rank
+        start = request.GET.get('start', 0)
+        return friends_rank[start:(start + 20)]
+
+@view_config(route_name='world_rank_fetch', renderer='json')
+def world_rank_fetch(request):
+    start = request.GET.get('start', 0)
+    return _get_world_rank()[start:(start + 20)]
 
 @cache_region('short_term', 'graph')
 def _get_graph(access_token):
@@ -110,6 +127,22 @@ def _get_graph(access_token):
 def _get_user_from_fb_id(fb_id):
     dbsession = DBSession()
     return dbsession.query(User).filter(User.fb_id==fb_id).first()
+
+@cache_region('short_term', 'friends_in_db')
+def _get_friends(user):
+    dbsession = DBSession()
+    return dbsession.query(Friend).filter(Friend.user_id==user.id).\
+            order_by(desc(Friend.score)).all()
+
+@cache_region('short_term', 'world_rank')
+def _get_world_rank():
+    dbsession = DBSession()
+    world_top = dbsession.query(Friend).order_by(desc(Friend.score)).\
+            limit(100).all()
+    world_top_users = dbsession.query(User).order_by(desc(User.score)).\
+            limit(100).all()
+    world_top.extend(world_top_users)
+    return sorted(world_top, key=lambda k:k.score, reverse=True)
 
 def _get_friends_id(graph):
     return ','.join([f['id'] for f in graph.get_connections('me',
