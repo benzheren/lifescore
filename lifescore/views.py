@@ -3,6 +3,7 @@ import random
 from beaker.cache import cache_region
 import facebook
 import memcache
+from pyramid.httpexceptions import HTTPFound
 from pyramid.view import view_config
 from pyramid.url import route_url
 from sqlalchemy.sql.expression import desc
@@ -72,16 +73,10 @@ def dashboard(request):
                 user.score = _get_lifescore(profile)
             dbsession.merge(user)
             dbsession.commit()
-
-        return dict(profile=profile,
-                        friends_id=_get_friends_id(graph).encode('ascii', 'ignore'))
-            #fecth existing data from db and return the dashboard
+        
+        return dict(profile=profile, friends_rank=_get_friends(user)[0:20])
     else:
-        # need redirect to a 404 error page
-        fb_id = 'no cookie'
-        pass
-    
-    return dict(fb_id=fb_id)
+        return HTTPFound(location=route_url('home', request))
 
 @view_config(route_name='fetch_friends', renderer='json')
 def fetch_friends(request):

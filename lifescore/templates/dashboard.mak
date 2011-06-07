@@ -49,6 +49,17 @@
 			</ul>
 			<div class="contents friends active">
 				<ul class="leaderboard" id="leaderboard">
+					% for f in friends_rank:
+						<li class="row">
+						<ul class="lb-row">
+							<li class="lb-rank">
+								<img class="smallpic" src="http://graph.facebook.com/${f.fb_id}/picture?type=square"/>
+							</li>
+							<li class="lb-name">${f.name}</li>
+							<li class="lb-score">${f.score}</li>
+						</ul>
+						</li>
+					% endfor
 				</ul>
 				<div class="leaderboard">
 					<div class="more"><a href="more">show more</a></div>
@@ -92,7 +103,6 @@
 		    size = friends_id.length/20;
 		var profile_id = ${profile["id"]};
 	</script>
+	<script type="text/javascript" src="../../static/js/score.js"></script>
 % endif
-
-<script type="text/javascript" src="../../static/js/score.js"></script>
 
