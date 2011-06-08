@@ -129,7 +129,7 @@ class UnitTests(unittest.TestCase):
         request = testing.DummyRequest()
         world_rank = views.world_rank_fetch(request)
         self.assertEquals(len(world_rank), 20)
-        self.assertEquals(world_rank[0].id, 1)
+        self.assertEquals(world_rank[0]['id'], 1)
         request = testing.DummyRequest(params={'start' : '40'})
         world_rank = views.world_rank_fetch(request)
         self.assertEqual(len(world_rank), 11)

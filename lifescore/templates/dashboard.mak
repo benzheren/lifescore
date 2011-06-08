@@ -96,6 +96,9 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script type="text/javascript" src="../../static/js/jquery.plugins.js"></script>
 <script type="text/javascript" src="../../static/js/jquery.quicksand.js"></script>
+% if friends_rank:
+	<script type="text/javascript" src="../../static/js/scroll-load.js"></script>
+% endif
 % if friends_id:
 	<script type="text/javascript">
 		var friends_id = ${friends_id.__repr__()|n}.split(","),
