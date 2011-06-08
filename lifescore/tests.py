@@ -128,6 +128,7 @@ class UnitTests(unittest.TestCase):
         self._addUsersAndFriends()
         request = testing.DummyRequest()
         world_rank = views.world_rank_fetch(request)
+        json.dumps(world_rank)
         self.assertEquals(len(world_rank), 20)
         self.assertEquals(world_rank[0]['id'], 1)
         request = testing.DummyRequest(params={'start' : '40'})
@@ -140,6 +141,7 @@ class UnitTests(unittest.TestCase):
         
         request = testing.DummyRequest(params={'fb_id' : 1})
         friends_rank = views.friends_rank_fetch(request)
+        json.dumps(friends_rank)
         self.assertEqual(len(friends_rank), 20)
         
         request = testing.DummyRequest(params={'fb_id' : 1, 'start' : '20'})
