@@ -106,12 +106,18 @@ def friends_rank_fetch(request):
         user = _get_user_from_fb_id(request.GET['fb_id'])
         friends_rank = _get_friends(user)
         request.session['friends_rank'] = friends_rank
-        start = request.GET.get('start', 0)
+        try:
+            start = int(request.GET.get('start', 0))
+        except ValueError:
+            pass
         return friends_rank[start:(start + 20)]
 
 @view_config(route_name='world_rank_fetch', renderer='json')
 def world_rank_fetch(request):
-    start = request.GET.get('start', 0)
+    try:
+        start = int(request.GET.get('start', 0))
+    except ValueError:
+        pass
     return _get_world_rank()[start:(start + 20)]
 
 @cache_region('short_term', 'graph')
