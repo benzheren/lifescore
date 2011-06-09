@@ -110,7 +110,7 @@ def friends_rank_fetch(request):
         start = int(request.GET.get('start', 0))
     except ValueError:
         pass
-    return [dict(id=f.id, fb_id=f.fb_id, name=f.name, score=f.name) for f in 
+    return [dict(id=f.id, fb_id=f.fb_id, name=f.name, score=f.score) for f in 
             friends_rank[start:(start + 20)]]
 
 @view_config(route_name='world_rank_fetch', renderer='json')
@@ -119,7 +119,7 @@ def world_rank_fetch(request):
         start = int(request.GET.get('start', 0))
     except ValueError:
         pass
-    return [dict(id=f.id, fb_id=f.fb_id, name=f.name, score=f.name) for f in 
+    return [dict(id=f.id, fb_id=f.fb_id, name=f.name, score=f.score) for f in 
             _get_world_rank()[start:(start + 20)]]
 
 @cache_region('short_term', 'graph')
