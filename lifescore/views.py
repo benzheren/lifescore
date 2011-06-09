@@ -66,7 +66,8 @@ def dashboard(request):
             dbsession.add(user)
             dbsession.commit()
             return dict(profile=profile,
-                        friends_id=_get_friends_id(graph).encode('ascii', 'ignore'))
+                        friends_id=_get_friends_id(graph).encode('ascii','ignore'),
+                        world_rank=_get_world_rank()[0:20])
         elif user.fb_access_token != cookie['access_token']:
             user.fb_access_token = cookie['access_token']
             if user.fb_updated_time != profile['update_time']:
@@ -74,7 +75,8 @@ def dashboard(request):
             dbsession.merge(user)
             dbsession.commit()
         
-        return dict(profile=profile, friends_rank=_get_friends(user)[0:20])
+        return dict(profile=profile, friends_rank=_get_friends(user)[0:20],
+                    world_rank=_get_world_rank()[0:20])
     else:
         return HTTPFound(location=route_url('home', request))
 
