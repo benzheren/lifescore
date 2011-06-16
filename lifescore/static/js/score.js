@@ -44,6 +44,11 @@ function fetch_friends(ids) {
 function fetch_friends_callback(data) {
 	var topfriends = '';
 	$.each(data, function(index, value){
+			
+			//checks to see if friend id is already on there
+			var $li = $('#leaderboard > li[id="'+value.id+'"]');
+			
+			if($li.length == 0) {
 			var friend = '<li id="'+value.id+'" class="row" value="'+value.score+'">'
 						+  	'<ul class="lb-row">'
 						+  	'<li class="lb-rank"><img class="smallpic" src="http://graph.facebook.com/'+value.id+'/picture?type=square" /></li>'
@@ -51,6 +56,7 @@ function fetch_friends_callback(data) {
 						+	'<li class="lb-score">'+value.score+'</li>'
 						+	'</ul></li>';	
 			topfriends += friend;
+			}
 	});
 	
 	$leaderboard.append(topfriends);

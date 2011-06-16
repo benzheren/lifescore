@@ -72,7 +72,7 @@
                 <div class="clear"></div>
 			</div>
 			<div class="contents world">
-				<ul class="leaderboard" id="leaderboard">
+				<ul class="leaderboard" id="leaderboard2">
 					% for f in world_rank:
 						<li class="row">
 						<ul class="lb-row">
