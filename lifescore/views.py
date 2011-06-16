@@ -74,6 +74,14 @@ def dashboard(request):
                 user.score = _get_lifescore(profile)
             dbsession.merge(user)
             dbsession.commit()
+
+        try:
+            debug = request.GET['debug']
+            return dict(profile=profile,
+                        friends_id=_get_friends_id(graph).encode('ascii','ignore'),
+                        world_rank=_get_world_rank()[0:20])
+        except KeyError:
+            pass
         
         return dict(profile=profile, friends_rank=_get_friends(user)[0:20],
                     world_rank=_get_world_rank()[0:20])
