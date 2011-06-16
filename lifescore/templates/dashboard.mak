@@ -49,6 +49,7 @@
 			</ul>
 			<div class="contents friends active">
 				<ul class="leaderboard" id="leaderboard">
+				% if friends_rank:
 					% for f in friends_rank:
 						<li class="row">
 						<ul class="lb-row">
@@ -60,6 +61,7 @@
 						</ul>
 						</li>
 					% endfor
+				% endif
 				</ul>
 				<div class="leaderboard">
 					<div class="more"><a href="more">show more</a></div>
