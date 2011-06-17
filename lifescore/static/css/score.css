@@ -371,11 +371,18 @@ ul.lb-row li.lb-rank, ul.lb-row li.lb-score  {
 	font-family: 'Terminal Dosis Light', arial, serif;
 
 }
-
 ul.lb-row li.lb-rank  {
+	width:50px;
+	margin:0;
+	padding:0;
+	color: rgba(55, 55, 55, 0.5);
+	
+}
+
+ul.lb-row li.lb-pic  {
 	width:60px;
 	height:50px;
-	color: rgba(55, 55, 55, 0.5);
+
 	margin:0;
 	padding:0;
 	

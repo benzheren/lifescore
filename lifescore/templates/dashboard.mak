@@ -112,15 +112,12 @@
 <script type="text/javascript" src="../../static/js/jquery.quicksand.js"></script>
 <script type="text/javascript" src="../../static/js/main.js"></script>
 % if friends_rank:
-	<script type="text/javascript" src="../../static/js/scroll-load.js"></script>
 % endif
-% if friends_id:
-	<script type="text/javascript">
-		var friends_id = ${friends_id.__repr__()|n}.split(","),
-		    length = friends_id.length,
-		    size = friends_id.length/20;
+<script type="text/javascript">
 		var profile_id = ${profile["id"]};
-	</script>
-	<script type="text/javascript" src="../../static/js/score.js"></script>
+% if friends_id:
+		var friends_id = ${friends_id.__repr__()|n}.split(","),
+		    size = friends_id.length/20;	
 % endif
-
+</script>
+<script type="text/javascript" src="../../static/js/score.js"></script>
