@@ -111,7 +111,7 @@ class Company(Base):
 class Major(Base):
     __tablename__ = 'majors'
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=False)
     name = Column(Unicode(255))
     avg_starting_salary = Column(Integer)
     mid_career_salary = Column(Integer)

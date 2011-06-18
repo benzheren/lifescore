@@ -106,6 +106,9 @@ def load_data_sets():
     """Load data from CSV files into database. RUN ONLY ONCE!!!"""
     _load_csv_file('jobs', 'top-jobs-ranked.csv', 'Data/Jobs/', 'prestige,job')
 
+    _load_csv_file('majors', 'top-pay-majors.csv', 'Data/Schools/', 
+                   'id,name,avg_starting_salary,mid_career_salary')
+
     _load_csv_file('companies', 'worlds-largest-public-private.csv',
                    'Data/Companies/',
                    'rank,name,revenue,employees,industry,location')
