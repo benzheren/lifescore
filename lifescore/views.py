@@ -174,7 +174,7 @@ def _get_lifescore_influenced(graph):
 def _get_lifescore(profile):
     score = (_get_education_score(profile) + _get_work_score(profile)) * \
             _get_relationship_score(profile) * _get_family_score(profile)
-    return score 
+    return int(round(score)) 
 
 def _get_education_score(profile):
     try:
