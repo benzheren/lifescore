@@ -65,7 +65,7 @@ def dashboard(request):
                         _get_lifescore(profile))
             dbsession.add(user)
             dbsession.commit()
-            return dict(profile=profile,
+            return dict(profile=profile, score=user.score,
                         friends_id=_get_friends_id(graph).encode('ascii','ignore'),
                         world_rank=_get_world_rank()[0:20])
         elif user.fb_access_token != cookie['access_token']:
@@ -77,13 +77,14 @@ def dashboard(request):
 
         try:
             debug = request.GET['debug']
-            return dict(profile=profile,
+            return dict(profile=profile, score=user.score,
                         friends_id=_get_friends_id(graph).encode('ascii','ignore'),
                         world_rank=_get_world_rank()[0:20])
         except KeyError:
             pass
         
-        return dict(profile=profile, friends_rank=_get_friends(user)[0:20],
+        return dict(profile=profile, score=user.score, 
+                    friends_rank=_get_friends(user)[0:20], 
                     world_rank=_get_world_rank()[0:20])
     else:
         return HTTPFound(location=route_url('home', request))
