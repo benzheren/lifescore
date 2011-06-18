@@ -79,6 +79,22 @@ class UnitTests(unittest.TestCase):
         self.session.add(user_2)
         self.session.flush()
 
+    def _addJobsRanking(self):
+        from lifescore.models import Job
+        self.session.add(Job(2, 'Interpreter'))
+        self.session.add(Job(4, 'Computer systems analyst'))
+        self.session.add(Job(6, 'Software Engineer'))
+        self.session.add(Job(10, 'CEO'))
+        self.session.add(Job(9, 'Chief Technology Officer'))
+        self.session.flush()
+
+    def _addMajors(self):
+        from lifescore.models import Major
+        self.session.add(Major(18, 'Finance', 47500, 91500))
+        self.session.add(Major(1, 'Petroleum Engineering', 93000, 157000))
+        self.session.add(Major(9, 'Computer Engineering', 61200, 99500))
+        self.session.flush()
+
     def test_get_relationship(self):
         from lifescore import views
         profile = json.loads('{"relationship_status": "Married"}')
@@ -122,6 +138,28 @@ class UnitTests(unittest.TestCase):
         self.assertEqual(views._get_education_score(profile), 1246)
         profile = json.loads('{}')
         self.assertEqual(views._get_education_score(profile), 0)
+
+    def test_job_rank(self):
+        from lifescore import views
+        self._addJobsRanking()
+        work = json.loads('{}')
+        self.assertEqual(views._get_job_prestige(work), 1)
+        work = json.loads('{"position" : {"name" : "Alternative Investments"}}')
+        self.assertEqual(views._get_job_prestige(work), 1)
+        work = json.loads('{"position" : {"name" : "software engineer"}}')
+        self.assertEqual(views._get_job_prestige(work), 6)
+
+    def test_major_rank(self):
+        from lifescore import views
+        self._addMajors()
+        school = json.loads('{}')
+        self.assertEqual(views._get_major_rank(school), 1)
+        school = json.loads('{"school" : {}, "concentration": []}')
+        self.assertEqual(views._get_major_rank(school), 1)
+        school = json.loads('{"school" : {}, "concentration": [{\
+                            "id": "1", "name": "Accounting"}, \
+                            {"id": "2", "name": "Finance"}]}')
+        self.assertEqual(views._get_major_rank(school), 1.1)
 
     def test_world_rank_fetch(self):
         from lifescore import views
