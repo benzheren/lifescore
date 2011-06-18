@@ -129,12 +129,12 @@ class UnitTests(unittest.TestCase):
         request = testing.DummyRequest()
         world_rank = views.world_rank_fetch(request)
         json.dumps(world_rank)
-        self.assertEquals(len(world_rank), 20)
+        self.assertEquals(len(world_rank), 10)
         self.assertEquals(world_rank[0]['id'], 1)
         self.assertEquals(world_rank[0]['score'], 850)
-        request = testing.DummyRequest(params={'start' : '40'})
+        request = testing.DummyRequest(params={'start' : '40', 'num' : '5'})
         world_rank = views.world_rank_fetch(request)
-        self.assertEqual(len(world_rank), 11)
+        self.assertEqual(len(world_rank), 5)
 
     def test_friends_rank_fetch(self):
         from lifescore import views
@@ -143,7 +143,7 @@ class UnitTests(unittest.TestCase):
         request = testing.DummyRequest(params={'fb_id' : 1})
         friends_rank = views.friends_rank_fetch(request)
         json.dumps(friends_rank)
-        self.assertEqual(len(friends_rank), 20)
+        self.assertEqual(len(friends_rank), 10)
         
         request = testing.DummyRequest(params={'fb_id' : 1, 'start' : '20'})
         friends_rank = views.friends_rank_fetch(request)
@@ -155,7 +155,12 @@ class UnitTests(unittest.TestCase):
 
         request = testing.DummyRequest(params={'fb_id' : 2})
         friends_rank = views.friends_rank_fetch(request)
-        self.assertEqual(len(friends_rank), 19)
+        self.assertEqual(len(friends_rank), 10)
+
+        request = testing.DummyRequest(params={'fb_id' : 2, 'start' : '10',
+                                               'num' : '10'})
+        friends_rank = views.friends_rank_fetch(request)
+        self.assertEqual(len(friends_rank), 9)
         
  
 
