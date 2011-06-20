@@ -111,13 +111,14 @@ class Company(Base):
 class Major(Base):
     __tablename__ = 'majors'
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=False)
     name = Column(Unicode(255))
     avg_starting_salary = Column(Integer)
     mid_career_salary = Column(Integer)
 
-    def __init__(self, name=None, avg_staring_salary=None,
+    def __init__(self, id, name=None, avg_starting_salary=None,
             mid_career_salary=None):
+        self.id = id
         self.name = name
         self.avg_starting_salary = avg_starting_salary
         self.mid_career_salary = mid_career_salary

@@ -27,7 +27,7 @@
 			
 			<div class="your-score">your score</div>
 			
-			<div class="score"><h2>750</h2></div>
+			<div class="score"><h2>${score}</h2></div>
 		</div>
 		
 		<div class="share">

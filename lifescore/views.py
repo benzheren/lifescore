@@ -10,7 +10,7 @@ from sqlalchemy.sql.expression import desc
 
 from lifescore import tasks
 from lifescore.models import User, NationalSchools, WorldSchools, Company
-from lifescore.models import Friend
+from lifescore.models import Friend, Job, Major
 from lifescore.models import DBSession
 
 
@@ -65,7 +65,7 @@ def dashboard(request):
                         _get_lifescore(profile))
             dbsession.add(user)
             dbsession.commit()
-            return dict(profile=profile,
+            return dict(profile=profile, score=user.score,
                         friends_id=_get_friends_id(graph).encode('ascii','ignore'),
                         world_rank=_get_world_rank()[0:20])
         elif user.fb_access_token != cookie['access_token']:
@@ -77,13 +77,14 @@ def dashboard(request):
 
         try:
             debug = request.GET['debug']
-            return dict(profile=profile,
+            return dict(profile=profile, score=user.score,
                         friends_id=_get_friends_id(graph).encode('ascii','ignore'),
                         world_rank=_get_world_rank()[0:20])
         except KeyError:
             pass
         
-        return dict(profile=profile, friends_rank=_get_friends(user)[0:20],
+        return dict(profile=profile, score=user.score, 
+                    friends_rank=_get_friends(user)[0:20], 
                     world_rank=_get_world_rank()[0:20])
     else:
         return HTTPFound(location=route_url('home', request))
@@ -118,19 +119,21 @@ def friends_rank_fetch(request):
         request.session['friends_rank'] = friends_rank
     try:
         start = int(request.GET.get('start', 0))
+        num = int(request.GET.get('num', 10))
     except ValueError:
         pass
     return [dict(id=f.id, fb_id=f.fb_id, name=f.name, score=f.score) for f in 
-            friends_rank[start:(start + 20)]]
+            friends_rank[start:(start + num)]]
 
 @view_config(route_name='world_rank_fetch', renderer='json')
 def world_rank_fetch(request):
     try:
         start = int(request.GET.get('start', 0))
+        num = int(request.GET.get('num', 10))
     except ValueError:
         pass
     return [dict(id=f.id, fb_id=f.fb_id, name=f.name, score=f.score) for f in 
-            _get_world_rank()[start:(start + 20)]]
+            _get_world_rank()[start:(start + num)]]
 
 @cache_region('short_term', 'graph')
 def _get_graph(access_token):
@@ -171,9 +174,7 @@ def _get_lifescore_influenced(graph):
 def _get_lifescore(profile):
     score = (_get_education_score(profile) + _get_work_score(profile)) * \
             _get_relationship_score(profile) * _get_family_score(profile)
-    #location = profile['location']
-    #gender = profile['gender']
-    return random.randint(400, 850)
+    return int(round(score)) 
 
 def _get_education_score(profile):
     try:
@@ -181,16 +182,27 @@ def _get_education_score(profile):
         score = 0
         for s in schools:
             if s['type'] == 'College':
-                score += _get_school_rank(s['school']['name'])
+                score += _get_school_rank(s['school']['name']) *\
+                        _get_major_rank(s)
             elif s['type'] == 'Graduate School':
                 score += 1.5 * _get_school_rank(s['school']['name'])
         return score
     except KeyError:
         return 0
 
-@cache_region('long_term', 'major_rank')
-def _get_major_rank(major):
-    return 0
+def _get_major_rank(school):
+    majors = school.get('concentration', [])
+    for m in majors:
+        if _get_all_majors().get(m['name'], 0):
+            return 1.1
+    return 1
+
+@cache_region('long_term', 'majors')
+def _get_all_majors():
+    dbsession = DBSession()
+    majors = dbsession.query(Major.name).order_by(
+        desc(Major.avg_starting_salary)).limit(40)
+    return dict([(m.name, 1) for m in majors])
 
 @cache_region('long_term', 'single_school_rank')
 def _get_school_rank(name):
@@ -245,8 +257,8 @@ def _get_work_score(profile):
 
 def _get_job_prestige(work):
     try:
-        position = work['position']['name']
-        return 1
+        prestige = _get_jobs()[work['position']['name'].lower()]
+        return prestige
     except KeyError:
         return 1
 
@@ -254,18 +266,20 @@ def _get_job_prestige(work):
 def _get_jobs():
     dbsession = DBSession()
     jobs = dbsession.query(Job.prestige, Job.job).all()
+    return dict([(job.job.lower(), job.prestige) for job in jobs])
 
 def _get_employer_score(name):
-    if _get_top_companies()[name]:
+    if _get_top_companies().get(name, 0):
         return 500
     else:
-        # Is basic score 200?
         return 200
 
 @cache_region('long_term', 'top_companies')
 def _get_top_companies():
     dbsession = DBSession()
-    companies = dict.fromkeys(dbsession.query(Company.name).all(), 1)
+    
+    companies = dict([(c.name, 1) 
+                      for c in dbsession.query(Company.name).all()])
     return companies
 
 def _get_relationship_score(profile):
