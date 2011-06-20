@@ -1,4 +1,5 @@
 $(function() {
+	var pageNum = 1;
 	
 	$('.sticky').ajaxStart(function() {
 		$(this).show();
@@ -18,10 +19,11 @@ if(size) {
 		}	
 	}
 } else {
-	$(window).bind('scroll', loadOnScroll);
+	pageNum = 0;
+	fetch_more_friends();
 }
 
-var pageNum = 1;
+
 
 function fetch_more_friends() {
 	pageNum = pageNum + 1;

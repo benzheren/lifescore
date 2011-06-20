@@ -115,6 +115,7 @@
 % endif
 <script type="text/javascript">
 		var profile_id = ${profile["id"]};
+		var size = 0;
 % if friends_id:
 		var friends_id = ${friends_id.__repr__()|n}.split(","),
 		    size = friends_id.length/20;	
